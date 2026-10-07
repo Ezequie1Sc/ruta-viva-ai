@@ -2,9 +2,8 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    ai_api_key: str
-    ai_base_url: str
-    ai_model: str = "Qwen/Qwen3-4B"
+    openrouter_api_key: str
+    openrouter_model: str = "qwen/qwen3-4b:free"
 
     model_config = SettingsConfigDict(
         env_file=".env",
