@@ -14,16 +14,26 @@ router = APIRouter(
 @router.post("/generate", response_model=Adventure)
 async def generate_adventure(request: AdventureRequest) -> Adventure:
     prompt = f"""
-Create an outdoor adventure for Ruta Viva AI.
+You are the AI Game Master for Ruta Viva AI.
 
-Duration: {request.duration} minutes
-Adventure type: {request.adventure_type.value}
-Difficulty: {request.difficulty.value}
+Create an outdoor adventure that encourages the player
+to leave their screen and explore their real-world surroundings.
 
+Adventure configuration:
+- Duration: {request.duration} minutes
+- Type: {request.adventure_type.value}
+- Difficulty: {request.difficulty.value}
+
+LANGUAGE:
+- Write ALL content in Spanish.
+- The title, description, mission titles and mission descriptions
+  must be written in natural, clear Spanish.
+
+OUTPUT:
 Return ONLY valid JSON.
-Do not use markdown.
+Do not use Markdown.
 Do not use code fences.
-Do not include explanations.
+Do not include explanations before or after the JSON.
 
 Use exactly this structure:
 
@@ -38,18 +48,28 @@ Use exactly this structure:
       "xp": 25
     }}
   ],
-  "total_xp": 100
+  "total_xp": 75
 }}
 
-Rules:
-- Create exactly 3 missions.
-- Each mission must encourage the user to physically explore
-  their real-world surroundings.
-- Missions must be safe and possible during a normal outdoor walk.
-- Do not require entering private property.
-- Do not require spending money.
-- Keep descriptions short and clear.
-- total_xp must equal the sum of all mission XP.
+RULES:
+- Create between 3 and 5 missions.
+- Every mission must involve physical exploration.
+- Missions must be possible during a normal outdoor walk.
+- Missions must be safe for the player.
+- Never ask the player to enter private property.
+- Never ask the player to cross a dangerous road.
+- Never ask the player to approach dangerous animals.
+- Never ask the player to touch unknown substances or objects.
+- Never require spending money.
+- Never require special equipment.
+- Do not instruct the player to damage, remove or disturb plants,
+  animals, buildings or public property.
+- Prefer observation, walking, discovering, photographing
+  and identifying things around the player.
+- Keep mission descriptions short and actionable.
+- XP must be an integer.
+- total_xp MUST equal the sum of the XP of all missions.
+- The duration field MUST be exactly {request.duration}.
 """
 
     try:
@@ -61,17 +81,26 @@ Rules:
         ) from exc
 
     try:
-        # Remove possible markdown code fences if the model adds them.
         cleaned_result = result.strip()
 
-        if cleaned_result.startswith("```"):
-            cleaned_result = cleaned_result.replace("```json", "", 1)
-            cleaned_result = cleaned_result.replace("```", "", 1)
+        if cleaned_result.startswith("`"):
+            cleaned_result = cleaned_result.replace("`json", "", 1)
+            cleaned_result = cleaned_result.replace("`", "", 1)
             cleaned_result = cleaned_result.strip()
 
         adventure_data = json.loads(cleaned_result)
 
         adventure = Adventure.model_validate(adventure_data)
+
+        calculated_xp = sum(
+            mission.xp for mission in adventure.missions
+        )
+
+        if calculated_xp != adventure.total_xp:
+            raise ValueError("total_xp does not match mission XP")
+
+        if not 3 <= len(adventure.missions) <= 5:
+            raise ValueError("Adventure must contain between 3 and 5 missions")
 
     except (json.JSONDecodeError, ValueError, TypeError) as exc:
         raise HTTPException(
@@ -79,6 +108,7 @@ Rules:
             detail={
                 "message": "AI returned an invalid adventure format",
                 "ai_response": result,
+                "error": str(exc),
             },
         ) from exc
 
