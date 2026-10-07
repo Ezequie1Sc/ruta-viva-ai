@@ -1,3 +1,5 @@
+import json
+
 from fastapi import APIRouter, HTTPException
 
 from app.models.adventure import Adventure, AdventureRequest
@@ -18,7 +20,12 @@ Duration: {request.duration} minutes
 Adventure type: {request.adventure_type.value}
 Difficulty: {request.difficulty.value}
 
-Return ONLY valid JSON with this structure:
+Return ONLY valid JSON.
+Do not use markdown.
+Do not use code fences.
+Do not include explanations.
+
+Use exactly this structure:
 
 {{
   "title": "string",
@@ -34,9 +41,15 @@ Return ONLY valid JSON with this structure:
   "total_xp": 100
 }}
 
-Create 3 to 5 missions.
-The missions must encourage the user to physically explore
-their real-world surroundings.
+Rules:
+- Create exactly 3 missions.
+- Each mission must encourage the user to physically explore
+  their real-world surroundings.
+- Missions must be safe and possible during a normal outdoor walk.
+- Do not require entering private property.
+- Do not require spending money.
+- Keep descriptions short and clear.
+- total_xp must equal the sum of all mission XP.
 """
 
     try:
@@ -47,12 +60,26 @@ their real-world surroundings.
             detail=f"AI provider error: {exc}",
         ) from exc
 
-    # Temporalmente devolveremos el texto de la IA.
-    # En el siguiente bloque lo convertiremos a Adventure.
-    raise HTTPException(
-        status_code=501,
-        detail={
-            "message": "AI connected, JSON parsing pending",
-            "ai_response": result,
-        },
-    )
+    try:
+        # Remove possible markdown code fences if the model adds them.
+        cleaned_result = result.strip()
+
+        if cleaned_result.startswith("```"):
+            cleaned_result = cleaned_result.replace("```json", "", 1)
+            cleaned_result = cleaned_result.replace("```", "", 1)
+            cleaned_result = cleaned_result.strip()
+
+        adventure_data = json.loads(cleaned_result)
+
+        adventure = Adventure.model_validate(adventure_data)
+
+    except (json.JSONDecodeError, ValueError, TypeError) as exc:
+        raise HTTPException(
+            status_code=502,
+            detail={
+                "message": "AI returned an invalid adventure format",
+                "ai_response": result,
+            },
+        ) from exc
+
+    return adventure
