@@ -5,9 +5,9 @@ from app.core.config import settings
 
 class AIService:
     def __init__(self) -> None:
-        self.base_url = settings.ai_base_url
-        self.api_key = settings.ai_api_key
-        self.model = settings.ai_model
+        self.base_url = "https://openrouter.ai/api/v1"
+        self.api_key = settings.openrouter_api_key
+        self.model = settings.openrouter_model
 
     async def generate_adventure(self, prompt: str) -> str:
         headers = {
