@@ -1,0 +1,1 @@
+export interface Badge { id: string; name: string; description: string; filename: string; target: number; progress: number; unit: string; unlocked: boolean; category: 'common'|'uncommon'|'rare'|'epic'|'legendary'|'special'; }
