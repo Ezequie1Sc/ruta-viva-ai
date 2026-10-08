@@ -1,1 +1,18 @@
-export interface Badge { id: string; name: string; description: string; filename: string; target: number; progress: number; unit: string; unlocked: boolean; category: 'common'|'uncommon'|'rare'|'epic'|'legendary'|'special'; }
+export type BadgeRarity =
+  | 'common'
+  | 'uncommon'
+  | 'rare'
+  | 'epic'
+  | 'legendary'
+  | 'special';
+
+export interface Badge {
+  id: string;
+  name: string;
+  description: string;
+  icon: string;
+  rarity: BadgeRarity;
+  unlocked: boolean;
+  progress: number;
+  target: number;
+}
