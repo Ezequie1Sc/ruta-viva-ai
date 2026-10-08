@@ -1,5 +1,11 @@
-import { Component } from '@angular/core';
-import { RouterLink, Router } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
+
+import {
+  AdventureRequest,
+  AdventureType,
+  Difficulty,
+} from '../../core/models/adventure.model';
 
 @Component({
   selector: 'app-setup',
@@ -8,25 +14,43 @@ import { RouterLink, Router } from '@angular/router';
   styleUrl: './setup.scss',
 })
 export class Setup {
-  duration = 30;
-  type = 'nature';
-  difficulty = 'easy';
+  private readonly router = inject(Router);
 
-  constructor(private readonly router: Router) {}
+  duration = 30;
+  type: AdventureType = 'nature';
+  difficulty: Difficulty = 'easy';
 
   selectDuration(value: number): void {
     this.duration = value;
+
+    console.log('Duración seleccionada:', this.duration);
   }
 
-  selectType(value: string): void {
+  selectType(value: AdventureType): void {
     this.type = value;
+
+    console.log('Tipo seleccionado:', this.type);
   }
 
-  selectDifficulty(value: string): void {
+  selectDifficulty(value: Difficulty): void {
     this.difficulty = value;
+
+    console.log('Dificultad seleccionada:', this.difficulty);
   }
 
   createAdventure(): void {
-    this.router.navigate(['/loading']);
+    const request: AdventureRequest = {
+      duration: this.duration,
+      adventure_type: this.type,
+      difficulty: this.difficulty,
+    };
+
+    console.log('Enviando aventura:', request);
+
+    this.router.navigate(['/loading'], {
+      state: {
+        request,
+      },
+    });
   }
 }
