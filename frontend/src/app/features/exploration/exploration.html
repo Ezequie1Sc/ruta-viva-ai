@@ -1,117 +1,274 @@
 <div class="min-h-screen bg-[#f7f8f5]">
 
-  <header class="flex items-center justify-between border-b border-slate-200 bg-white px-5 py-4">
+  <header
+    class="sticky top-0 z-20 flex items-center justify-between border-b border-slate-200 bg-white px-5 py-4"
+  >
+    <div>
+      <p class="font-bold text-slate-900">
+        Ruta Viva
+        <span class="text-emerald-600">AI</span>
+      </p>
 
-    <span class="font-bold">
-      Ruta Viva <span class="text-emerald-600">AI</span>
-    </span>
-
-    <span class="rounded-full bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-700">
-      ★ 75 XP
-    </span>
-
-  </header>
-
-  <main class="mx-auto max-w-6xl p-4">
-
-    <div class="relative h-[55vh] min-h-[420px] overflow-hidden rounded-[2rem] bg-[#dcebdd]">
-
-      <!-- Simulación visual del mapa -->
-      <div class="absolute inset-0 opacity-50">
-
-        <div class="absolute left-[20%] top-0 h-full w-px rotate-[15deg] bg-white"></div>
-        <div class="absolute left-[60%] top-0 h-full w-px rotate-[-20deg] bg-white"></div>
-
-        <div class="absolute top-[30%] h-px w-full rotate-[10deg] bg-white"></div>
-        <div class="absolute top-[65%] h-px w-full rotate-[-12deg] bg-white"></div>
-
-      </div>
-
-      <svg
-        class="absolute inset-0 h-full w-full"
-        viewBox="0 0 1000 500"
-        preserveAspectRatio="none"
-      >
-        <path
-          d="M180 420 C300 360 270 270 430 290 C560 305 520 150 680 175 C770 190 780 90 870 70"
-          stroke="#059669"
-          stroke-width="7"
-          stroke-dasharray="14 12"
-          fill="none"
-          stroke-linecap="round"
-        />
-      </svg>
-
-      <div class="absolute left-[16%] top-[75%] flex h-12 w-12 items-center justify-center rounded-full border-4 border-white bg-blue-500 shadow-lg">
-        <div class="h-3 w-3 rounded-full bg-white"></div>
-      </div>
-
-      <div class="absolute right-[10%] top-[10%] flex h-12 w-12 items-center justify-center rounded-full border-4 border-white bg-slate-900 text-white shadow-lg">
-        ★
-      </div>
-
+      @if (adventure(); as currentAdventure) {
+        <p class="text-xs text-slate-400">
+          {{ currentAdventure.title }}
+        </p>
+      }
     </div>
 
-    <div class="mt-4 rounded-[2rem] bg-white p-5 shadow-sm">
+    <span
+      class="rounded-full bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-700"
+    >
+      ★ {{ totalXp }} XP
+    </span>
+  </header>
 
-      <div class="mb-5 flex items-center justify-between">
+  <main class="mx-auto max-w-6xl p-4 pb-10">
 
+    <!-- MAPA -->
+    <section
+      class="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-200 shadow-sm"
+    >
+      <div
+        id="map"
+        class="h-[55vh] min-h-[420px] w-full"
+      ></div>
+
+      @if (locationError) {
+        <div
+          class="absolute left-4 right-4 top-4 z-[1000] rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800 shadow-sm"
+        >
+          No pudimos acceder a tu ubicación.
+          Activa el permiso de ubicación para
+          seguir tu ruta.
+        </div>
+      }
+
+      @if (!mapReady) {
+        <div
+          class="absolute inset-0 z-[900] flex items-center justify-center bg-slate-100/90"
+        >
+          <div class="text-center">
+            <div
+              class="mx-auto h-8 w-8 animate-spin rounded-full border-4 border-slate-300 border-t-emerald-600"
+            ></div>
+
+            <p class="mt-3 text-sm font-medium text-slate-600">
+              Obteniendo tu ubicación...
+            </p>
+          </div>
+        </div>
+      }
+    </section>
+
+    <!-- ESTADÍSTICAS -->
+    <section
+      class="mt-4 grid grid-cols-3 gap-3"
+    >
+      <div
+        class="rounded-2xl bg-white p-4 text-center shadow-sm"
+      >
+        <p class="text-xl font-bold text-slate-900">
+          {{ formattedDistance }}
+        </p>
+
+        <p class="mt-1 text-xs text-slate-400">
+          Distancia
+        </p>
+      </div>
+
+      <div
+        class="rounded-2xl bg-white p-4 text-center shadow-sm"
+      >
+        <p class="text-xl font-bold text-slate-900">
+          {{ formattedTime }}
+        </p>
+
+        <p class="mt-1 text-xs text-slate-400">
+          Tiempo
+        </p>
+      </div>
+
+      <div
+        class="rounded-2xl bg-white p-4 text-center shadow-sm"
+      >
+        <p class="text-xl font-bold text-slate-900">
+          {{ totalXp }}
+        </p>
+
+        <p class="mt-1 text-xs text-slate-400">
+          XP
+        </p>
+      </div>
+    </section>
+
+    <!-- MISIONES -->
+    <section
+      class="mt-4 rounded-[2rem] bg-white p-5 shadow-sm"
+    >
+
+      <div
+        class="mb-5 flex items-center justify-between"
+      >
         <div>
-          <p class="text-sm font-semibold">
-            2 / 3 misiones completadas
+          <p class="text-sm font-semibold text-slate-900">
+            {{ completedMissions }} /
+            {{ missions.length }}
+            misiones completadas
           </p>
 
-          <div class="mt-2 h-2 w-48 overflow-hidden rounded-full bg-slate-100">
-            <div class="h-full w-2/3 rounded-full bg-emerald-500"></div>
+          <div
+            class="mt-2 h-2 w-48 overflow-hidden rounded-full bg-slate-100"
+          >
+            <div
+              class="h-full rounded-full bg-emerald-500 transition-all duration-500"
+              [style.width.%]="progressPercent"
+            ></div>
           </div>
         </div>
 
-        <span class="text-sm text-slate-400">
-          75 XP
+        <span
+          class="text-sm text-slate-400"
+        >
+          {{ progressPercent }}%
         </span>
-
       </div>
 
-      <div class="space-y-2">
+      <!-- MISIÓN ACTIVA -->
+      @if (activeMission; as mission) {
 
-        @for (mission of missions; track mission.title) {
+        <div
+          class="mb-4 rounded-2xl border-2 border-emerald-200 bg-emerald-50 p-5"
+        >
+          <div
+            class="flex items-start justify-between gap-4"
+          >
+            <div>
+              <p
+                class="text-xs font-bold uppercase tracking-wider text-emerald-600"
+              >
+                Misión actual
+              </p>
 
-          <div class="flex items-center gap-4 rounded-xl border border-slate-100 p-4">
+              <h2
+                class="mt-2 text-lg font-bold text-slate-900"
+              >
+                {{ mission.title }}
+              </h2>
 
-            <div
-              class="flex h-9 w-9 items-center justify-center rounded-full"
-              [class.bg-emerald-500]="mission.status === 'completed'"
-              [class.bg-slate-100]="mission.status !== 'completed'"
-              [class.text-white]="mission.status === 'completed'"
-            >
-              {{ mission.status === 'completed' ? '✓' : '○' }}
-            </div>
-
-            <div class="flex-1">
-              <p class="font-medium">{{ mission.title }}</p>
-              <p class="text-xs text-slate-400">
-                {{ mission.status === 'completed' ? 'Completada' : mission.status === 'active' ? 'En proceso' : 'Pendiente' }}
+              <p
+                class="mt-2 text-sm leading-6 text-slate-600"
+              >
+                {{ mission.description }}
               </p>
             </div>
 
-            <span class="rounded-full bg-emerald-50 px-3 py-2 text-xs font-semibold text-emerald-700">
+            <span
+              class="shrink-0 rounded-full bg-white px-3 py-2 text-xs font-bold text-emerald-700"
+            >
+              +{{ mission.xp }} XP
+            </span>
+          </div>
+
+          <button
+            type="button"
+            (click)="completeCurrentMission()"
+            class="mt-5 w-full rounded-xl bg-[#064e3b] px-5 py-3 font-semibold text-white transition hover:bg-[#053d2f]"
+          >
+            Completar misión
+          </button>
+        </div>
+      }
+
+      <!-- LISTA DE MISIONES -->
+      <div class="space-y-2">
+
+        @for (
+          mission of missions;
+          track $index
+        ) {
+
+          <div
+            class="flex items-center gap-4 rounded-xl border border-slate-100 p-4"
+            [class.bg-slate-50]="mission.status === 'pending'"
+            [class.bg-emerald-50]="mission.status === 'completed'"
+          >
+
+            <div
+              class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full"
+              [class.bg-emerald-500]="mission.status === 'completed'"
+              [class.bg-emerald-100]="mission.status === 'active'"
+              [class.bg-slate-100]="mission.status === 'pending'"
+              [class.text-white]="mission.status === 'completed'"
+              [class.text-emerald-700]="mission.status === 'active'"
+            >
+              @if (mission.status === 'completed') {
+                ✓
+              } @else if (mission.status === 'active') {
+                ●
+              } @else {
+                ○
+              }
+            </div>
+
+            <div class="min-w-0 flex-1">
+
+              <p
+                class="font-medium"
+                [class.text-slate-900]="mission.status !== 'completed'"
+                [class.text-emerald-800]="mission.status === 'completed'"
+              >
+                {{ mission.title }}
+              </p>
+
+              <p
+                class="text-xs"
+                [class.text-emerald-600]="mission.status === 'completed'"
+                [class.text-emerald-700]="mission.status === 'active'"
+                [class.text-slate-400]="mission.status === 'pending'"
+              >
+                @if (mission.status === 'completed') {
+                  Completada
+                } @else if (mission.status === 'active') {
+                  En proceso
+                } @else {
+                  Pendiente
+                }
+              </p>
+
+            </div>
+
+            <span
+              class="rounded-full bg-emerald-50 px-3 py-2 text-xs font-semibold text-emerald-700"
+            >
               +{{ mission.xp }} XP
             </span>
 
           </div>
-
         }
 
       </div>
 
-      <a
-        routerLink="/result"
-        class="mt-5 block rounded-2xl bg-[#064e3b] px-6 py-4 text-center font-semibold text-white"
+      <!-- FINALIZAR -->
+      <button
+        type="button"
+        (click)="completeAdventure()"
+        [disabled]="!allMissionsCompleted"
+        class="mt-5 w-full rounded-2xl px-6 py-4 text-center font-semibold transition"
+        [class.bg-[#064e3b]]="allMissionsCompleted"
+        [class.text-white]="allMissionsCompleted"
+        [class.bg-slate-100]="!allMissionsCompleted"
+        [class.text-slate-400]="!allMissionsCompleted"
+        [class.cursor-not-allowed]="!allMissionsCompleted"
       >
-        Completar aventura
-      </a>
+        @if (allMissionsCompleted) {
+          Completar aventura →
+        } @else {
+          Completa todas las misiones
+        }
+      </button>
 
-    </div>
+    </section>
 
   </main>
 
