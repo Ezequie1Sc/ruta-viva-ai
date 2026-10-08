@@ -32,3 +32,11 @@ def root():
         "message": "Ruta Viva AI API funcionando",
         "status": "ok",
     }
+
+
+@app.get("/health")
+def health():
+    return {
+        "status": "ok",
+        "service": "ruta-viva-ai",
+    }
