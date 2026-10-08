@@ -1,3 +1,15 @@
 :host {
   display: block;
 }
+
+#map {
+  z-index: 1;
+}
+
+:global(.leaflet-control-zoom) {
+  border: none !important;
+}
+
+:global(.leaflet-control-zoom a) {
+  color: #064e3b !important;
+}
