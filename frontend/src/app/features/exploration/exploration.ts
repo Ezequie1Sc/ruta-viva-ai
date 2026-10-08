@@ -1,9 +1,16 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  imports: [],
   selector: 'app-exploration',
-  styleUrl: './exploration.scss',
+  imports: [RouterLink],
   templateUrl: './exploration.html',
+  styleUrl: './exploration.scss',
 })
-export class Exploration {}
+export class Exploration {
+  missions = [
+    { title: 'Observa la corteza', status: 'completed', xp: 25 },
+    { title: 'Escucha tu entorno', status: 'active', xp: 25 },
+    { title: 'Descubre algo nuevo', status: 'pending', xp: 25 },
+  ];
+}
