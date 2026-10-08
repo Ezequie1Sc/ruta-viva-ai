@@ -1,80 +1,129 @@
-<section class="relative min-h-screen overflow-hidden bg-slate-950">
-  <!-- Decorative background -->
-  <div
-    class="absolute -left-32 -top-32 h-96 w-96 rounded-full bg-emerald-500/10 blur-3xl"
-  ></div>
+<div class="min-h-screen bg-[#f7f8f5] text-slate-900">
 
-  <div
-    class="absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl"
-  ></div>
+  <header class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
+    <a routerLink="/" class="text-lg font-bold tracking-tight">
+      Ruta Viva <span class="text-emerald-600">AI</span>
+    </a>
 
-  <div class="relative mx-auto flex min-h-screen max-w-6xl flex-col px-6">
-    <!-- Header -->
-    <header class="flex items-center justify-between py-6">
-      <a routerLink="/" class="text-xl font-bold tracking-tight">
-        Ruta Viva
-        <span class="text-emerald-400">AI</span>
-      </a>
+    <a
+      routerLink="/history"
+      class="rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-medium transition hover:bg-slate-50"
+    >
+      Mis aventuras →
+    </a>
+  </header>
 
-      <a
-        routerLink="/setup"
-        class="rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300 transition hover:border-emerald-400/40 hover:text-white"
-      >
-        Comenzar
-      </a>
-    </header>
+  <main class="mx-auto grid min-h-[calc(100vh-80px)] max-w-7xl items-center gap-12 px-6 py-10 lg:grid-cols-2 lg:px-10">
 
-    <!-- Hero -->
-    <div class="flex flex-1 items-center justify-center py-16">
-      <div class="max-w-3xl text-center">
-        <div
-          class="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/5 px-4 py-2 text-sm text-emerald-300"
-        >
-          <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
-          Tu próxima aventura empieza afuera
-        </div>
+    <section class="max-w-xl">
 
-        <h1
-          class="text-5xl font-black leading-tight tracking-tight sm:text-6xl md:text-7xl"
-        >
-          Tu mundo
-          <span class="text-emerald-400"> es el juego.</span>
-        </h1>
-
-        <p
-          class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-400 sm:text-xl"
-        >
-          Ruta Viva AI crea aventuras únicas para que explores tu entorno,
-          completes misiones y conviertas una caminata normal en una
-          experiencia.
-        </p>
-
-        <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a
-            routerLink="/setup"
-            class="group flex w-full items-center justify-center gap-3 rounded-2xl bg-emerald-400 px-7 py-4 font-bold text-slate-950 transition hover:bg-emerald-300 sm:w-auto"
-          >
-            Crear mi aventura
-
-            <span
-              class="transition-transform group-hover:translate-x-1"
-            >
-              →
-            </span>
-          </a>
-
-          <div class="flex items-center gap-2 text-sm text-slate-500">
-            <span>Sin cuenta</span>
-            <span>•</span>
-            <span>Sin complicaciones</span>
-          </div>
-        </div>
+      <div class="mb-6 inline-flex items-center gap-2 rounded-full bg-emerald-50 px-4 py-2 text-sm font-medium text-emerald-700">
+        <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+        Aventuras generadas con IA
       </div>
-    </div>
 
-    <!-- Bottom message -->
-    <footer class="pb-8 text-center text-sm text-slate-600">
-      <p>Explora. Descubre. Vive.</p>
-    </footer>
-  </div>
-</section>
+      <h1 class="text-5xl font-semibold leading-[1.02] tracking-[-0.04em] sm:text-6xl">
+        Tu mundo
+        <br />
+        <span class="text-emerald-600">es el juego.</span>
+      </h1>
+
+      <p class="mt-7 max-w-lg text-lg leading-8 text-slate-500">
+        Descubre nuevas formas de explorar tu entorno.
+        Ruta Viva AI crea aventuras para que salgas,
+        camines y descubras lo que tienes cerca.
+      </p>
+
+      <div class="mt-9">
+        <a
+          routerLink="/setup"
+          class="inline-flex items-center gap-3 rounded-full bg-[#064e3b] px-7 py-4 text-sm font-semibold text-white transition hover:bg-[#053d2f]"
+        >
+          Crear una aventura
+          <span>→</span>
+        </a>
+      </div>
+
+      <div class="mt-10 grid max-w-md grid-cols-3 gap-4">
+
+        <div class="text-center">
+          <div class="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
+            ◇
+          </div>
+          <p class="mt-2 text-sm font-semibold">Explora</p>
+          <p class="text-xs text-slate-400">tu entorno</p>
+        </div>
+
+        <div class="text-center">
+          <div class="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
+            ✦
+          </div>
+          <p class="mt-2 text-sm font-semibold">Descubre</p>
+          <p class="text-xs text-slate-400">lugares únicos</p>
+        </div>
+
+        <div class="text-center">
+          <div class="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
+            △
+          </div>
+          <p class="mt-2 text-sm font-semibold">Vive</p>
+          <p class="text-xs text-slate-400">nuevas historias</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="relative">
+
+      <div class="overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-3 shadow-[0_30px_80px_-35px_rgba(15,23,42,0.25)]">
+
+        <div class="relative h-[560px] overflow-hidden rounded-[1.5rem] bg-[#dcebdd]">
+
+          <div class="absolute inset-0 opacity-50">
+            <div class="absolute left-[10%] top-[25%] h-40 w-40 rounded-full bg-emerald-300/30"></div>
+            <div class="absolute right-[5%] top-[45%] h-52 w-52 rounded-full bg-emerald-400/20"></div>
+          </div>
+
+          <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-emerald-950/20 to-transparent"></div>
+
+          <div class="absolute left-[15%] top-[30%] h-24 w-24 rounded-full bg-emerald-200/70"></div>
+
+          <svg
+            class="absolute inset-0 h-full w-full"
+            viewBox="0 0 500 560"
+            fill="none"
+          >
+            <path
+              d="M70 470 C120 420 115 340 190 320 C260 300 250 210 330 190 C390 175 400 120 445 90"
+              stroke="#059669"
+              stroke-width="6"
+              stroke-linecap="round"
+              stroke-dasharray="12 12"
+            />
+
+            <circle cx="70" cy="470" r="13" fill="#10b981" stroke="white" stroke-width="6" />
+            <circle cx="445" cy="90" r="13" fill="#0f172a" stroke="white" stroke-width="6" />
+          </svg>
+
+          <div class="absolute bottom-6 left-6 right-6 rounded-2xl bg-white/95 p-5 shadow-lg backdrop-blur">
+            <div class="flex items-center gap-4">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
+                ◎
+              </div>
+
+              <div>
+                <p class="text-xs text-slate-400">Tu próxima ruta</p>
+                <p class="font-semibold">Explora cerca de ti</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+</div>
