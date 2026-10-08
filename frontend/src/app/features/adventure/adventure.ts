@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
+
+import { AdventureService } from '../../core/services/adventure.service';
 
 @Component({
   selector: 'app-adventure',
@@ -8,21 +10,15 @@ import { RouterLink } from '@angular/router';
   styleUrl: './adventure.scss',
 })
 export class Adventure {
-  missions = [
-    {
-      title: 'Observa la corteza',
-      description: 'Encuentra un árbol y observa sus detalles.',
-      xp: 25,
-    },
-    {
-      title: 'Escucha tu entorno',
-      description: 'Identifica tres sonidos naturales.',
-      xp: 25,
-    },
-    {
-      title: 'Descubre algo nuevo',
-      description: 'Busca algo que nunca hayas notado antes.',
-      xp: 25,
-    },
-  ];
+  private readonly router = inject(Router);
+
+  readonly adventureService =
+    inject(AdventureService);
+
+  readonly adventure =
+    this.adventureService.currentAdventure;
+
+  startAdventure(): void {
+    this.router.navigate(['/exploration']);
+  }
 }
