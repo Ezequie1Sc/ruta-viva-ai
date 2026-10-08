@@ -1,1 +1,80 @@
-<p>home works!</p>
+<section class="relative min-h-screen overflow-hidden bg-slate-950">
+  <!-- Decorative background -->
+  <div
+    class="absolute -left-32 -top-32 h-96 w-96 rounded-full bg-emerald-500/10 blur-3xl"
+  ></div>
+
+  <div
+    class="absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl"
+  ></div>
+
+  <div class="relative mx-auto flex min-h-screen max-w-6xl flex-col px-6">
+    <!-- Header -->
+    <header class="flex items-center justify-between py-6">
+      <a routerLink="/" class="text-xl font-bold tracking-tight">
+        Ruta Viva
+        <span class="text-emerald-400">AI</span>
+      </a>
+
+      <a
+        routerLink="/setup"
+        class="rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300 transition hover:border-emerald-400/40 hover:text-white"
+      >
+        Comenzar
+      </a>
+    </header>
+
+    <!-- Hero -->
+    <div class="flex flex-1 items-center justify-center py-16">
+      <div class="max-w-3xl text-center">
+        <div
+          class="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/5 px-4 py-2 text-sm text-emerald-300"
+        >
+          <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+          Tu próxima aventura empieza afuera
+        </div>
+
+        <h1
+          class="text-5xl font-black leading-tight tracking-tight sm:text-6xl md:text-7xl"
+        >
+          Tu mundo
+          <span class="text-emerald-400"> es el juego.</span>
+        </h1>
+
+        <p
+          class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-400 sm:text-xl"
+        >
+          Ruta Viva AI crea aventuras únicas para que explores tu entorno,
+          completes misiones y conviertas una caminata normal en una
+          experiencia.
+        </p>
+
+        <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <a
+            routerLink="/setup"
+            class="group flex w-full items-center justify-center gap-3 rounded-2xl bg-emerald-400 px-7 py-4 font-bold text-slate-950 transition hover:bg-emerald-300 sm:w-auto"
+          >
+            Crear mi aventura
+
+            <span
+              class="transition-transform group-hover:translate-x-1"
+            >
+              →
+            </span>
+          </a>
+
+          <div class="flex items-center gap-2 text-sm text-slate-500">
+            <span>Sin cuenta</span>
+            <span>•</span>
+            <span>Sin complicaciones</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom message -->
+    <footer class="pb-8 text-center text-sm text-slate-600">
+      <p>Explora. Descubre. Vive.</p>
+    </footer>
+  </div>
+</section>
