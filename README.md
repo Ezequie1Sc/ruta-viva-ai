@@ -64,12 +64,12 @@ Choose your preferred adventure type, difficulty, and duration to find an experi
 ### Discover your missions
 
 <p align="center">
-  <img src="frontend/public/adventure/adventure.png" alt="Adventure details and outdoor missions" width="48%">
-  <img src="frontend/public/adventure/adventure2.png" alt="Adventure mission interface" width="48%">
+  <img src="frontend/public/adverture/adverture.png" alt="Adventure details and outdoor missions" width="48%">
+  <img src="frontend/public/adverture/adverture2.png" alt="Adventure mission interface" width="48%">
 </p>
 
 <p align="center">
-  <img src="frontend/public/adventure/adventure3.png" alt="Additional adventure screen" width="70%">
+  <img src="frontend/public/adverture/adverture3.png" alt="Additional adventure screen" width="70%">
 </p>
 
 Every adventure contains a set of missions designed to encourage real-world exploration.
@@ -94,7 +94,7 @@ Complete your missions, collect XP, and celebrate the experience.
 
 <p align="center">
   <img src="frontend/public/loading/loading.png" alt="Ruta Viva AI loading screen" width="48%">
-  <img src="frontend/public/badge/badge.png" alt="Ruta Viva AI achievement badge" width="48%">
+  <img src="frontend/public/bagde/bagde.png" alt="Ruta Viva AI achievement badge" width="48%">
 </p>
 
 ## 🧠 How the AI Works
