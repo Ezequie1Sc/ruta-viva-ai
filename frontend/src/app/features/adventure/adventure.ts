@@ -1,15 +1,36 @@
-import { Component, inject } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
 
-import { AdventureService } from '../../core/services/adventure.service';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject
+} from '@angular/core';
+
+import {
+  Router,
+  RouterLink
+} from '@angular/router';
+
+import {
+  AdventureService
+} from '../../core/services/adventure.service';
 
 @Component({
   selector: 'app-adventure',
-  imports: [RouterLink],
+
+  standalone: true,
+
+  imports: [
+    RouterLink
+  ],
+
   templateUrl: './adventure.html',
+
   styleUrl: './adventure.scss',
+
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Adventure {
+
   private readonly router = inject(Router);
 
   readonly adventureService =
@@ -21,4 +42,5 @@ export class Adventure {
   startAdventure(): void {
     this.router.navigate(['/exploration']);
   }
+
 }
