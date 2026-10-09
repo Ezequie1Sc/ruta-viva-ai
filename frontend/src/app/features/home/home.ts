@@ -1,10 +1,39 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+
+import {
+  ChangeDetectionStrategy,
+  Component,
+  signal
+} from '@angular/core';
+
+import {
+  RouterLink,
+  RouterLinkActive
+} from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink],
+  standalone: true,
+
+  imports: [
+    RouterLink,
+    RouterLinkActive
+  ],
+
   templateUrl: './home.html',
   styleUrl: './home.scss',
+
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class Home {}
+export class Home {
+
+  readonly menuOpen = signal(false);
+
+  toggleMenu(): void {
+    this.menuOpen.update(open => !open);
+  }
+
+  closeMenu(): void {
+    this.menuOpen.set(false);
+  }
+
+}
