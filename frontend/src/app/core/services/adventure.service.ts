@@ -14,7 +14,7 @@ export class AdventureService {
   private readonly http = inject(HttpClient);
 
   private readonly apiUrl =
-    'http://127.0.0.1:8000/api';
+    'https://ruta-viva-ai-backend.onrender.com/api';
 
   readonly currentAdventure = signal<Adventure | null>(null);
 
