@@ -1,3 +1,4 @@
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -11,18 +12,25 @@ app = FastAPI(
 )
 
 
+# Dominios permitidos para conectarse al backend
+origins = [
+    "http://localhost:4200",
+    "http://127.0.0.1:4200",
+    "https://ruta-viva-ai-hbdn.vercel.app",
+]
+
+
+# Configuración de CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:4200",
-        "http://127.0.0.1:4200",
-    ],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 
+# Rutas de la API
 app.include_router(adventures_router)
 
 
