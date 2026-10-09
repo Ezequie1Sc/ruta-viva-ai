@@ -1,56 +1,145 @@
-import { Component, inject } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject
+} from '@angular/core';
+
+import {
+  Router,
+  RouterLink
+} from '@angular/router';
 
 import {
   AdventureRequest,
   AdventureType,
-  Difficulty,
+  Difficulty
 } from '../../core/models/adventure.model';
+
+interface AdventureTypeOption {
+  value: AdventureType;
+  label: string;
+  description: string;
+}
+
+interface DifficultyOption {
+  value: Difficulty;
+  label: string;
+  description: string;
+  level: number;
+}
 
 @Component({
   selector: 'app-setup',
-  imports: [RouterLink],
+  standalone: true,
+
+  imports: [
+    RouterLink
+  ],
+
   templateUrl: './setup.html',
   styleUrl: './setup.scss',
+
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Setup {
+
   private readonly router = inject(Router);
 
   duration = 30;
   type: AdventureType = 'nature';
   difficulty: Difficulty = 'easy';
 
+  readonly durations: number[] = [
+    15,
+    30,
+    45,
+    60
+  ];
+
+  readonly adventureTypes: AdventureTypeOption[] = [
+    {
+      value: 'nature',
+      label: 'Nature',
+      description: 'Explore landscapes, plants, and the outdoors.'
+    },
+    {
+      value: 'culture',
+      label: 'Culture',
+      description: 'Discover local stories, places, and heritage.'
+    },
+    {
+      value: 'walk',
+      label: 'Walking',
+      description: 'Enjoy a refreshing walk at your own pace.'
+    },
+    {
+      value: 'surprise',
+      label: 'Surprise me',
+      description: 'Let AI choose your next experience.'
+    }
+  ];
+
+  readonly difficulties: DifficultyOption[] = [
+    {
+      value: 'easy',
+      label: 'Easy',
+      description: 'Relaxed exploration',
+      level: 1
+    },
+    {
+      value: 'medium',
+      label: 'Moderate',
+      description: 'A balanced challenge',
+      level: 2
+    },
+    {
+      value: 'hard',
+      label: 'Challenging',
+      description: 'For bold explorers',
+      level: 3
+    }
+  ];
+
+  get typeLabel(): string {
+    return (
+      this.adventureTypes.find(
+        option => option.value === this.type
+      )?.label ?? this.type
+    );
+  }
+
+  get difficultyLabel(): string {
+    return (
+      this.difficulties.find(
+        option => option.value === this.difficulty
+      )?.label ?? this.difficulty
+    );
+  }
+
   selectDuration(value: number): void {
     this.duration = value;
-
-    console.log('Duración seleccionada:', this.duration);
   }
 
   selectType(value: AdventureType): void {
     this.type = value;
-
-    console.log('Tipo seleccionado:', this.type);
   }
 
   selectDifficulty(value: Difficulty): void {
     this.difficulty = value;
-
-    console.log('Dificultad seleccionada:', this.difficulty);
   }
 
   createAdventure(): void {
     const request: AdventureRequest = {
       duration: this.duration,
       adventure_type: this.type,
-      difficulty: this.difficulty,
+      difficulty: this.difficulty
     };
-
-    console.log('Enviando aventura:', request);
 
     this.router.navigate(['/loading'], {
       state: {
-        request,
-      },
+        request
+      }
     });
   }
+
 }
