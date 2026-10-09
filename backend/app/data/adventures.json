@@ -3,12 +3,12 @@
     "id": "nature-easy-01",
     "adventure_type": "nature",
     "difficulty": "easy",
-    "title": "Pequeños exploradores",
-    "description": "Descubre los detalles de la naturaleza durante un paseo tranquilo.",
+    "title": "Little Explorers",
+    "description": "Discover the details of nature during a relaxing walk.",
     "missions": [
-      {"title": "Observa el cielo", "description": "Observa las nubes durante un minuto e identifica sus formas.", "xp": 10},
-      {"title": "Busca tres colores", "description": "Identifica tres colores diferentes en elementos naturales.", "xp": 15},
-      {"title": "Escucha tu entorno", "description": "Identifica tres sonidos naturales desde un lugar seguro.", "xp": 15}
+      {"title": "Observe the Sky", "description": "Observe the clouds for one minute and identify their shapes.", "xp": 10},
+      {"title": "Find Three Colors", "description": "Identify three different colors in natural elements.", "xp": 15},
+      {"title": "Listen to Your Surroundings", "description": "Identify three natural sounds from a safe location.", "xp": 15}
     ],
     "total_xp": 40
   },
@@ -16,12 +16,12 @@
     "id": "nature-easy-02",
     "adventure_type": "nature",
     "difficulty": "easy",
-    "title": "Cazadores de hojas",
-    "description": "Explora las formas y texturas de la vegetación sin alterar el entorno.",
+    "title": "Leaf Hunters",
+    "description": "Explore the shapes and textures of vegetation without disturbing the environment.",
     "missions": [
-      {"title": "Hojas diferentes", "description": "Observa tres hojas de formas distintas sin arrancarlas.", "xp": 15},
-      {"title": "Busca sombras", "description": "Encuentra dos sombras interesantes creadas por la vegetación.", "xp": 10},
-      {"title": "Detecta simetría", "description": "Encuentra una forma simétrica en la naturaleza.", "xp": 15}
+      {"title": "Different Leaves", "description": "Observe three leaves with different shapes without picking them.", "xp": 15},
+      {"title": "Look for Shadows", "description": "Find two interesting shadows created by vegetation.", "xp": 10},
+      {"title": "Spot Symmetry", "description": "Find a symmetrical shape in nature.", "xp": 15}
     ],
     "total_xp": 40
   },
@@ -29,12 +29,12 @@
     "id": "nature-easy-03",
     "adventure_type": "nature",
     "difficulty": "easy",
-    "title": "Sinfonía natural",
-    "description": "Presta atención a los sonidos que te rodean al aire libre.",
+    "title": "Nature's Symphony",
+    "description": "Pay attention to the sounds around you outdoors.",
     "missions": [
-      {"title": "Primer sonido", "description": "Identifica un sonido producido por el viento.", "xp": 10},
-      {"title": "Voces de la naturaleza", "description": "Escucha e identifica un sonido de un animal a distancia.", "xp": 15},
-      {"title": "Pausa consciente", "description": "Permanece un minuto en silencio y reconoce tres sonidos.", "xp": 15}
+      {"title": "First Sound", "description": "Identify a sound produced by the wind.", "xp": 10},
+      {"title": "Voices of Nature", "description": "Listen for and identify an animal sound from a distance.", "xp": 15},
+      {"title": "Mindful Pause", "description": "Remain silent for one minute and identify three sounds.", "xp": 15}
     ],
     "total_xp": 40
   },
@@ -42,12 +42,12 @@
     "id": "nature-medium-01",
     "adventure_type": "nature",
     "difficulty": "medium",
-    "title": "Detective de la naturaleza",
-    "description": "Investiga los pequeños detalles del paisaje durante tu recorrido.",
+    "title": "Nature Detective",
+    "description": "Investigate the small details of the landscape along your route.",
     "missions": [
-      {"title": "Encuentra patrones", "description": "Observa tres patrones distintos en hojas, nubes o cortezas.", "xp": 15},
-      {"title": "Explora un nuevo tramo", "description": "Camina por un tramo público y seguro que no hayas recorrido recientemente.", "xp": 25},
-      {"title": "Descubre biodiversidad", "description": "Identifica visualmente dos tipos de plantas o animales a distancia.", "xp": 20}
+      {"title": "Find Patterns", "description": "Observe three different patterns in leaves, clouds, or tree bark.", "xp": 15},
+      {"title": "Explore a New Section", "description": "Walk along a safe public section you have not visited recently.", "xp": 25},
+      {"title": "Discover Biodiversity", "description": "Visually identify two types of plants or animals from a distance.", "xp": 20}
     ],
     "total_xp": 60
   },
@@ -55,12 +55,12 @@
     "id": "nature-medium-02",
     "adventure_type": "nature",
     "difficulty": "medium",
-    "title": "Geometría verde",
-    "description": "Descubre formas geométricas escondidas en el paisaje.",
+    "title": "Green Geometry",
+    "description": "Discover geometric shapes hidden in the landscape.",
     "missions": [
-      {"title": "Encuentra círculos", "description": "Identifica dos formas circulares en elementos naturales.", "xp": 15},
-      {"title": "Líneas naturales", "description": "Observa tres líneas o curvas en ramas, hojas o nubes.", "xp": 20},
-      {"title": "Contrastes del paisaje", "description": "Encuentra un contraste de color y otro de textura.", "xp": 25}
+      {"title": "Find Circles", "description": "Identify two circular shapes in natural elements.", "xp": 15},
+      {"title": "Natural Lines", "description": "Observe three lines or curves in branches, leaves, or clouds.", "xp": 20},
+      {"title": "Landscape Contrasts", "description": "Find one color contrast and one texture contrast.", "xp": 25}
     ],
     "total_xp": 60
   },
@@ -68,12 +68,12 @@
     "id": "nature-medium-03",
     "adventure_type": "nature",
     "difficulty": "medium",
-    "title": "Explorador del clima",
-    "description": "Observa las condiciones ambientales y sus cambios.",
+    "title": "Weather Explorer",
+    "description": "Observe environmental conditions and how they change.",
     "missions": [
-      {"title": "Estado del cielo", "description": "Describe si el cielo está despejado, nublado o parcialmente cubierto.", "xp": 15},
-      {"title": "Siente el viento", "description": "Observa cómo el viento mueve las hojas desde un sitio seguro.", "xp": 20},
-      {"title": "Encuentra un cambio", "description": "Identifica un cambio de luz o sombra durante tu paseo.", "xp": 25}
+      {"title": "Sky Conditions", "description": "Describe whether the sky is clear, cloudy, or partly cloudy.", "xp": 15},
+      {"title": "Feel the Wind", "description": "Observe how the wind moves the leaves from a safe location.", "xp": 20},
+      {"title": "Find a Change", "description": "Identify a change in light or shadow during your walk.", "xp": 25}
     ],
     "total_xp": 60
   },
@@ -81,13 +81,13 @@
     "id": "nature-hard-01",
     "adventure_type": "nature",
     "difficulty": "hard",
-    "title": "Expedición natural",
-    "description": "Completa retos de observación y exploración al aire libre.",
+    "title": "Nature Expedition",
+    "description": "Complete outdoor observation and exploration challenges.",
     "missions": [
-      {"title": "Observador del paisaje", "description": "Identifica cinco elementos diferentes del paisaje.", "xp": 20},
-      {"title": "Explora una ruta", "description": "Recorre un tramo nuevo de un sendero público y seguro.", "xp": 25},
-      {"title": "Detecta sonidos", "description": "Identifica cuatro sonidos diferentes del entorno.", "xp": 20},
-      {"title": "Registra hallazgos", "description": "Anota tres descubrimientos interesantes de tu recorrido.", "xp": 15}
+      {"title": "Landscape Observer", "description": "Identify five different elements in the landscape.", "xp": 20},
+      {"title": "Explore a Route", "description": "Walk along a new section of a safe public trail.", "xp": 25},
+      {"title": "Identify Sounds", "description": "Identify four different sounds in your surroundings.", "xp": 20},
+      {"title": "Record Your Findings", "description": "Write down three interesting discoveries from your route.", "xp": 15}
     ],
     "total_xp": 80
   },
@@ -95,13 +95,13 @@
     "id": "nature-hard-02",
     "adventure_type": "nature",
     "difficulty": "hard",
-    "title": "Atlas del paisaje",
-    "description": "Construye un registro personal de las características del entorno.",
+    "title": "Landscape Atlas",
+    "description": "Create a personal record of the environment's features.",
     "missions": [
-      {"title": "Clasifica colores", "description": "Registra cinco colores diferentes que encuentres en el paisaje.", "xp": 20},
-      {"title": "Observa ecosistemas", "description": "Identifica visualmente tres tipos de elementos naturales.", "xp": 25},
-      {"title": "Mapa de sonidos", "description": "Anota cuatro sonidos y la dirección aproximada de donde proceden.", "xp": 20},
-      {"title": "Resumen natural", "description": "Describe tres características del lugar que visitaste.", "xp": 15}
+      {"title": "Classify Colors", "description": "Record five different colors you find in the landscape.", "xp": 20},
+      {"title": "Observe Ecosystems", "description": "Visually identify three types of natural elements.", "xp": 25},
+      {"title": "Sound Map", "description": "Record four sounds and the approximate direction they come from.", "xp": 20},
+      {"title": "Nature Summary", "description": "Describe three features of the place you visited.", "xp": 15}
     ],
     "total_xp": 80
   },
@@ -109,12 +109,12 @@
     "id": "culture-easy-01",
     "adventure_type": "culture",
     "difficulty": "easy",
-    "title": "Historias de mi comunidad",
-    "description": "Descubre detalles culturales y arquitectónicos de tu comunidad.",
+    "title": "Stories of My Community",
+    "description": "Discover cultural and architectural details in your community.",
     "missions": [
-      {"title": "Observa la arquitectura", "description": "Identifica un detalle arquitectónico desde un espacio público.", "xp": 15},
-      {"title": "Encuentra un símbolo", "description": "Observa un mural, símbolo o elemento artístico visible desde la vía pública.", "xp": 15},
-      {"title": "Mira con atención", "description": "Encuentra un detalle de tu entorno que normalmente pasas por alto.", "xp": 10}
+      {"title": "Observe the Architecture", "description": "Identify an architectural detail from a public space.", "xp": 15},
+      {"title": "Find a Symbol", "description": "Observe a mural, symbol, or artistic element visible from a public street.", "xp": 15},
+      {"title": "Look Closely", "description": "Find a detail in your surroundings that you would normally overlook.", "xp": 10}
     ],
     "total_xp": 40
   },
@@ -122,12 +122,12 @@
     "id": "culture-easy-02",
     "adventure_type": "culture",
     "difficulty": "easy",
-    "title": "Colores de mi ciudad",
-    "description": "Explora la identidad visual de los espacios que te rodean.",
+    "title": "Colors of My City",
+    "description": "Explore the visual identity of the spaces around you.",
     "missions": [
-      {"title": "Color dominante", "description": "Identifica el color más frecuente en una calle pública.", "xp": 10},
-      {"title": "Detalles decorativos", "description": "Encuentra dos detalles decorativos en edificios visibles desde la vía pública.", "xp": 15},
-      {"title": "Arte cotidiano", "description": "Observa un elemento artístico o decorativo interesante.", "xp": 15}
+      {"title": "Dominant Color", "description": "Identify the most common color on a public street.", "xp": 10},
+      {"title": "Decorative Details", "description": "Find two decorative details on buildings visible from a public street.", "xp": 15},
+      {"title": "Everyday Art", "description": "Observe an interesting artistic or decorative element.", "xp": 15}
     ],
     "total_xp": 40
   },
@@ -135,12 +135,12 @@
     "id": "culture-easy-03",
     "adventure_type": "culture",
     "difficulty": "easy",
-    "title": "Ventanas al pasado",
-    "description": "Observa cómo la arquitectura refleja la historia de una comunidad.",
+    "title": "Windows to the Past",
+    "description": "Observe how architecture reflects a community's history.",
     "missions": [
-      {"title": "Formas antiguas", "description": "Observa una característica arquitectónica tradicional desde un lugar público.", "xp": 15},
-      {"title": "Materiales visibles", "description": "Identifica dos materiales utilizados en edificios que puedas observar.", "xp": 10},
-      {"title": "Un detalle especial", "description": "Registra un detalle arquitectónico que te parezca interesante.", "xp": 15}
+      {"title": "Traditional Shapes", "description": "Observe a traditional architectural feature from a public place.", "xp": 15},
+      {"title": "Visible Materials", "description": "Identify two materials used in buildings you can observe.", "xp": 10},
+      {"title": "A Special Detail", "description": "Record an architectural detail that you find interesting.", "xp": 15}
     ],
     "total_xp": 40
   },
@@ -148,12 +148,12 @@
     "id": "culture-medium-01",
     "adventure_type": "culture",
     "difficulty": "medium",
-    "title": "Rastros culturales",
-    "description": "Descubre las historias que cuentan los espacios públicos.",
+    "title": "Cultural Traces",
+    "description": "Discover the stories told by public spaces.",
     "missions": [
-      {"title": "Ruta de los detalles", "description": "Identifica tres detalles arquitectónicos diferentes.", "xp": 20},
-      {"title": "Arte en el camino", "description": "Localiza dos elementos artísticos desde espacios públicos.", "xp": 20},
-      {"title": "Compara tu entorno", "description": "Observa diferencias entre dos espacios públicos.", "xp": 20}
+      {"title": "Detail Trail", "description": "Identify three different architectural details.", "xp": 20},
+      {"title": "Art Along the Way", "description": "Locate two artistic elements from public spaces.", "xp": 20},
+      {"title": "Compare Your Surroundings", "description": "Observe differences between two public spaces.", "xp": 20}
     ],
     "total_xp": 60
   },
@@ -161,12 +161,12 @@
     "id": "culture-medium-02",
     "adventure_type": "culture",
     "difficulty": "medium",
-    "title": "Cronista urbano",
-    "description": "Documenta detalles cotidianos que dan personalidad a una comunidad.",
+    "title": "Urban Chronicler",
+    "description": "Document everyday details that give a community its character.",
     "missions": [
-      {"title": "Un lugar significativo", "description": "Identifica un espacio público que parezca importante para la comunidad.", "xp": 20},
-      {"title": "Detalles de identidad", "description": "Encuentra dos símbolos, colores o elementos representativos.", "xp": 20},
-      {"title": "Crónica breve", "description": "Escribe tres frases sobre lo que observaste.", "xp": 20}
+      {"title": "A Meaningful Place", "description": "Identify a public space that seems important to the community.", "xp": 20},
+      {"title": "Identity Details", "description": "Find two representative symbols, colors, or elements.", "xp": 20},
+      {"title": "Short Chronicle", "description": "Write three sentences about what you observed.", "xp": 20}
     ],
     "total_xp": 60
   },
@@ -174,12 +174,12 @@
     "id": "culture-medium-03",
     "adventure_type": "culture",
     "difficulty": "medium",
-    "title": "Galería al aire libre",
-    "description": "Busca expresiones artísticas en los espacios públicos.",
+    "title": "Open-Air Gallery",
+    "description": "Look for artistic expressions in public spaces.",
     "missions": [
-      {"title": "Primera obra", "description": "Localiza un mural, escultura o decoración artística visible públicamente.", "xp": 20},
-      {"title": "Busca contrastes", "description": "Observa diferencias de forma y color entre dos elementos artísticos.", "xp": 20},
-      {"title": "Tu interpretación", "description": "Describe qué sensación o idea te transmite una obra.", "xp": 20}
+      {"title": "First Artwork", "description": "Locate a mural, sculpture, or artistic decoration visible to the public.", "xp": 20},
+      {"title": "Look for Contrasts", "description": "Observe differences in shape and color between two artistic elements.", "xp": 20},
+      {"title": "Your Interpretation", "description": "Describe the feeling or idea an artwork conveys to you.", "xp": 20}
     ],
     "total_xp": 60
   },
@@ -187,13 +187,13 @@
     "id": "culture-hard-01",
     "adventure_type": "culture",
     "difficulty": "hard",
-    "title": "Explorador cultural",
-    "description": "Completa una investigación visual de tu entorno urbano.",
+    "title": "Cultural Explorer",
+    "description": "Complete a visual investigation of your urban surroundings.",
     "missions": [
-      {"title": "Ruta arquitectónica", "description": "Identifica cuatro detalles arquitectónicos diferentes.", "xp": 20},
-      {"title": "Arte y símbolos", "description": "Registra tres elementos artísticos o simbólicos visibles públicamente.", "xp": 20},
-      {"title": "Compara espacios", "description": "Encuentra tres diferencias entre dos espacios públicos.", "xp": 20},
-      {"title": "Documenta tu ruta", "description": "Redacta una breve crónica de tus observaciones.", "xp": 20}
+      {"title": "Architectural Route", "description": "Identify four different architectural details.", "xp": 20},
+      {"title": "Art and Symbols", "description": "Record three artistic or symbolic elements visible to the public.", "xp": 20},
+      {"title": "Compare Spaces", "description": "Find three differences between two public spaces.", "xp": 20},
+      {"title": "Document Your Route", "description": "Write a brief account of your observations.", "xp": 20}
     ],
     "total_xp": 80
   },
@@ -201,13 +201,13 @@
     "id": "culture-hard-02",
     "adventure_type": "culture",
     "difficulty": "hard",
-    "title": "Investigador del entorno",
-    "description": "Analiza los detalles visibles que hacen único a un lugar.",
+    "title": "Environment Researcher",
+    "description": "Analyze the visible details that make a place unique.",
     "missions": [
-      {"title": "Patrones arquitectónicos", "description": "Identifica tres patrones o formas que se repitan en edificios.", "xp": 20},
-      {"title": "Señales de identidad", "description": "Encuentra tres elementos que representen visualmente a la comunidad.", "xp": 20},
-      {"title": "Compara épocas", "description": "Describe diferencias visuales entre dos construcciones observables.", "xp": 20},
-      {"title": "Conclusiones", "description": "Escribe tres conclusiones basadas en tus observaciones.", "xp": 20}
+      {"title": "Architectural Patterns", "description": "Identify three patterns or shapes repeated across buildings.", "xp": 20},
+      {"title": "Signs of Identity", "description": "Find three elements that visually represent the community.", "xp": 20},
+      {"title": "Compare Eras", "description": "Describe visual differences between two buildings you can observe.", "xp": 20},
+      {"title": "Conclusions", "description": "Write three conclusions based on your observations.", "xp": 20}
     ],
     "total_xp": 80
   },
@@ -215,12 +215,12 @@
     "id": "walk-easy-01",
     "adventure_type": "walk",
     "difficulty": "easy",
-    "title": "Paseo consciente",
-    "description": "Disfruta de una caminata tranquila y descubre lo que te rodea.",
+    "title": "Mindful Walk",
+    "description": "Enjoy a relaxing walk and discover what's around you.",
     "missions": [
-      {"title": "Comienza a caminar", "description": "Camina cinco minutos por una ruta peatonal segura.", "xp": 15},
-      {"title": "Encuentra algo nuevo", "description": "Observa un detalle que no habías notado antes.", "xp": 10},
-      {"title": "Haz una pausa", "description": "Descansa en un lugar seguro y observa tu entorno durante un minuto.", "xp": 15}
+      {"title": "Start Walking", "description": "Walk for five minutes along a safe pedestrian route.", "xp": 15},
+      {"title": "Find Something New", "description": "Notice a detail you had not seen before.", "xp": 10},
+      {"title": "Take a Break", "description": "Rest in a safe place and observe your surroundings for one minute.", "xp": 15}
     ],
     "total_xp": 40
   },
@@ -228,12 +228,12 @@
     "id": "walk-easy-02",
     "adventure_type": "walk",
     "difficulty": "easy",
-    "title": "Cinco minutos de aventura",
-    "description": "Transforma un paseo corto en una oportunidad para descubrir.",
+    "title": "Five-Minute Adventure",
+    "description": "Turn a short walk into an opportunity to discover something new.",
     "missions": [
-      {"title": "Primeros pasos", "description": "Camina unos minutos por una ruta peatonal segura.", "xp": 10},
-      {"title": "Observa a tu alrededor", "description": "Identifica tres detalles interesantes durante el paseo.", "xp": 15},
-      {"title": "Cierra el recorrido", "description": "Recuerda y describe tu descubrimiento favorito.", "xp": 15}
+      {"title": "First Steps", "description": "Walk for a few minutes along a safe pedestrian route.", "xp": 10},
+      {"title": "Look Around", "description": "Identify three interesting details during your walk.", "xp": 15},
+      {"title": "Finish the Route", "description": "Recall and describe your favorite discovery.", "xp": 15}
     ],
     "total_xp": 40
   },
@@ -241,12 +241,12 @@
     "id": "walk-easy-03",
     "adventure_type": "walk",
     "difficulty": "easy",
-    "title": "Ruta de la tranquilidad",
-    "description": "Desconéctate de la pantalla y disfruta del entorno.",
+    "title": "Path to Tranquility",
+    "description": "Disconnect from your screen and enjoy your surroundings.",
     "missions": [
-      {"title": "Respira y observa", "description": "Haz una pausa en un lugar seguro y observa tu entorno.", "xp": 10},
-      {"title": "Camina sin prisa", "description": "Recorre una ruta peatonal a un ritmo cómodo.", "xp": 15},
-      {"title": "Encuentra serenidad", "description": "Identifica un lugar público tranquilo donde puedas descansar.", "xp": 15}
+      {"title": "Breathe and Observe", "description": "Pause in a safe place and observe your surroundings.", "xp": 10},
+      {"title": "Walk at Your Own Pace", "description": "Follow a pedestrian route at a comfortable pace.", "xp": 15},
+      {"title": "Find Serenity", "description": "Identify a quiet public place where you can rest.", "xp": 15}
     ],
     "total_xp": 40
   },
@@ -254,12 +254,12 @@
     "id": "walk-medium-01",
     "adventure_type": "walk",
     "difficulty": "medium",
-    "title": "Kilómetros de descubrimiento",
-    "description": "Convierte tu paseo en una pequeña expedición.",
+    "title": "Miles of Discovery",
+    "description": "Turn your walk into a small expedition.",
     "missions": [
-      {"title": "Explora una ruta", "description": "Camina diez minutos por una ruta peatonal segura.", "xp": 20},
-      {"title": "Cambia tu perspectiva", "description": "Observa tu entorno desde otro espacio público.", "xp": 20},
-      {"title": "Encuentra tres detalles", "description": "Identifica tres detalles interesantes del recorrido.", "xp": 20}
+      {"title": "Explore a Route", "description": "Walk for ten minutes along a safe pedestrian route.", "xp": 20},
+      {"title": "Change Your Perspective", "description": "Observe your surroundings from another public space.", "xp": 20},
+      {"title": "Find Three Details", "description": "Identify three interesting details along the route.", "xp": 20}
     ],
     "total_xp": 60
   },
@@ -267,12 +267,12 @@
     "id": "walk-medium-02",
     "adventure_type": "walk",
     "difficulty": "medium",
-    "title": "Explorador de caminos",
-    "description": "Descubre nuevas perspectivas en rutas conocidas.",
+    "title": "Path Explorer",
+    "description": "Discover new perspectives on familiar routes.",
     "missions": [
-      {"title": "Ruta alternativa", "description": "Elige un tramo público y seguro que no suelas recorrer.", "xp": 20},
-      {"title": "Puntos de referencia", "description": "Identifica tres puntos de referencia visibles.", "xp": 20},
-      {"title": "Recuerda el camino", "description": "Describe los principales lugares que observaste.", "xp": 20}
+      {"title": "Alternative Route", "description": "Choose a safe public section you do not usually take.", "xp": 20},
+      {"title": "Landmarks", "description": "Identify three visible landmarks.", "xp": 20},
+      {"title": "Remember the Route", "description": "Describe the main places you observed.", "xp": 20}
     ],
     "total_xp": 60
   },
@@ -280,12 +280,12 @@
     "id": "walk-medium-03",
     "adventure_type": "walk",
     "difficulty": "medium",
-    "title": "Misión pasos activos",
-    "description": "Combina movimiento suave con observación del entorno.",
+    "title": "Active Steps Mission",
+    "description": "Combine gentle movement with observation of your surroundings.",
     "missions": [
-      {"title": "Camina con propósito", "description": "Completa un tramo cómodo por una ruta peatonal segura.", "xp": 20},
-      {"title": "Cuenta descubrimientos", "description": "Identifica cinco objetos o detalles interesantes.", "xp": 20},
-      {"title": "Pausa de explorador", "description": "Descansa y registra tu descubrimiento favorito.", "xp": 20}
+      {"title": "Walk with Purpose", "description": "Complete a comfortable stretch along a safe pedestrian route.", "xp": 20},
+      {"title": "Count Discoveries", "description": "Identify five interesting objects or details.", "xp": 20},
+      {"title": "Explorer's Pause", "description": "Rest and record your favorite discovery.", "xp": 20}
     ],
     "total_xp": 60
   },
@@ -293,13 +293,13 @@
     "id": "walk-hard-01",
     "adventure_type": "walk",
     "difficulty": "hard",
-    "title": "Gran caminata exploradora",
-    "description": "Completa una serie de retos durante un recorrido al aire libre.",
+    "title": "Grand Exploration Walk",
+    "description": "Complete a series of challenges during an outdoor walk.",
     "missions": [
-      {"title": "Inicio de expedición", "description": "Comienza en un espacio público y sigue una ruta peatonal segura.", "xp": 20},
-      {"title": "Observación detallada", "description": "Identifica cinco detalles distintos a lo largo del camino.", "xp": 20},
-      {"title": "Nuevo punto de vista", "description": "Explora otro tramo público sin entrar en zonas restringidas.", "xp": 20},
-      {"title": "Bitácora final", "description": "Anota tres cosas que descubriste durante el recorrido.", "xp": 20}
+      {"title": "Expedition Start", "description": "Start in a public space and follow a safe pedestrian route.", "xp": 20},
+      {"title": "Detailed Observation", "description": "Identify five different details along the way.", "xp": 20},
+      {"title": "A New Point of View", "description": "Explore another public section without entering restricted areas.", "xp": 20},
+      {"title": "Final Log", "description": "Write down three things you discovered along the route.", "xp": 20}
     ],
     "total_xp": 80
   },
@@ -307,13 +307,13 @@
     "id": "walk-hard-02",
     "adventure_type": "walk",
     "difficulty": "hard",
-    "title": "Desafío de orientación",
-    "description": "Mejora tu atención espacial mediante una exploración segura.",
+    "title": "Navigation Challenge",
+    "description": "Improve your spatial awareness through safe exploration.",
     "missions": [
-      {"title": "Ubica referencias", "description": "Identifica cuatro puntos de referencia visibles en espacios públicos.", "xp": 20},
-      {"title": "Reconoce direcciones", "description": "Describe cómo llegarías a un punto conocido por una ruta segura.", "xp": 20},
-      {"title": "Explora una variante", "description": "Recorre una alternativa pública y segura de tu camino.", "xp": 20},
-      {"title": "Reconstruye el recorrido", "description": "Recuerda y enumera los lugares que observaste.", "xp": 20}
+      {"title": "Locate Landmarks", "description": "Identify four visible landmarks in public spaces.", "xp": 20},
+      {"title": "Identify Directions", "description": "Describe how you would reach a familiar location using a safe route.", "xp": 20},
+      {"title": "Explore an Alternative", "description": "Follow a safe public alternative to your usual route.", "xp": 20},
+      {"title": "Reconstruct the Route", "description": "Recall and list the places you observed.", "xp": 20}
     ],
     "total_xp": 80
   },
@@ -321,12 +321,12 @@
     "id": "surprise-easy-01",
     "adventure_type": "surprise",
     "difficulty": "easy",
-    "title": "La sorpresa del camino",
-    "description": "Descubre algo inesperado cerca de ti.",
+    "title": "A Surprise Along the Way",
+    "description": "Discover something unexpected near you.",
     "missions": [
-      {"title": "Elige una ruta segura", "description": "Selecciona un camino peatonal público que te resulte interesante.", "xp": 10},
-      {"title": "Descubre un detalle", "description": "Encuentra algo curioso que puedas observar sin tocarlo.", "xp": 15},
-      {"title": "Captura el momento", "description": "Describe o fotografía tu descubrimiento respetando la privacidad.", "xp": 15}
+      {"title": "Choose a Safe Route", "description": "Choose an interesting public pedestrian route.", "xp": 10},
+      {"title": "Discover a Detail", "description": "Find something curious that you can observe without touching it.", "xp": 15},
+      {"title": "Capture the Moment", "description": "Describe or photograph your discovery while respecting privacy.", "xp": 15}
     ],
     "total_xp": 40
   },
@@ -334,12 +334,12 @@
     "id": "surprise-easy-02",
     "adventure_type": "surprise",
     "difficulty": "easy",
-    "title": "La misión misteriosa",
-    "description": "Completa pequeños retos de observación elegidos al azar.",
+    "title": "The Mysterious Mission",
+    "description": "Complete small observation challenges selected at random.",
     "missions": [
-      {"title": "Algo redondo", "description": "Encuentra tres formas redondas en tu entorno.", "xp": 10},
-      {"title": "Un detalle brillante", "description": "Observa un reflejo o un elemento que destaque por su luz.", "xp": 15},
-      {"title": "Una coincidencia", "description": "Encuentra dos objetos que compartan una característica.", "xp": 15}
+      {"title": "Something Round", "description": "Find three round shapes in your surroundings.", "xp": 10},
+      {"title": "A Shining Detail", "description": "Observe a reflection or an element that stands out because of its light.", "xp": 15},
+      {"title": "A Coincidence", "description": "Find two objects that share a characteristic.", "xp": 15}
     ],
     "total_xp": 40
   },
@@ -347,12 +347,12 @@
     "id": "surprise-easy-03",
     "adventure_type": "surprise",
     "difficulty": "easy",
-    "title": "Bingo de exploración",
-    "description": "Busca elementos cotidianos que conviertan el paseo en un juego.",
+    "title": "Exploration Bingo",
+    "description": "Look for everyday items that turn your walk into a game.",
     "missions": [
-      {"title": "Algo azul", "description": "Encuentra tres elementos azules visibles desde un lugar público.", "xp": 10},
-      {"title": "Algo que se mueve", "description": "Observa un elemento que se mueva de forma natural o mecánica.", "xp": 15},
-      {"title": "Algo simétrico", "description": "Identifica una forma simétrica en tu entorno.", "xp": 15}
+      {"title": "Something Blue", "description": "Find three blue elements visible from a public place.", "xp": 10},
+      {"title": "Something That Moves", "description": "Observe something that moves naturally or mechanically.", "xp": 15},
+      {"title": "Something Symmetrical", "description": "Identify a symmetrical shape in your surroundings.", "xp": 15}
     ],
     "total_xp": 40
   },
@@ -360,12 +360,12 @@
     "id": "surprise-medium-01",
     "adventure_type": "surprise",
     "difficulty": "medium",
-    "title": "El mapa de los secretos",
-    "description": "Explora lugares cotidianos buscando detalles poco evidentes.",
+    "title": "Map of Secrets",
+    "description": "Explore everyday places in search of subtle details.",
     "missions": [
-      {"title": "Primer secreto", "description": "Encuentra un detalle arquitectónico que no habías observado.", "xp": 20},
-      {"title": "Conexiones ocultas", "description": "Identifica dos elementos del entorno que compartan una característica.", "xp": 20},
-      {"title": "Registra la pista", "description": "Anota tus tres descubrimientos más interesantes.", "xp": 20}
+      {"title": "First Secret", "description": "Find an architectural detail you had not noticed before.", "xp": 20},
+      {"title": "Hidden Connections", "description": "Identify two elements in your surroundings that share a characteristic.", "xp": 20},
+      {"title": "Record the Clue", "description": "Write down your three most interesting discoveries.", "xp": 20}
     ],
     "total_xp": 60
   },
@@ -373,12 +373,12 @@
     "id": "surprise-medium-02",
     "adventure_type": "surprise",
     "difficulty": "medium",
-    "title": "Exploración aleatoria",
-    "description": "Deja que tu curiosidad guíe una aventura por espacios públicos.",
+    "title": "Random Exploration",
+    "description": "Let your curiosity guide an adventure through public spaces.",
     "missions": [
-      {"title": "Elige un punto de interés", "description": "Selecciona un elemento visible que despierte tu curiosidad.", "xp": 20},
-      {"title": "Encuentra similitudes", "description": "Identifica dos elementos parecidos durante el recorrido.", "xp": 20},
-      {"title": "Descubre una diferencia", "description": "Encuentra una diferencia interesante entre dos lugares.", "xp": 20}
+      {"title": "Choose a Point of Interest", "description": "Choose a visible element that sparks your curiosity.", "xp": 20},
+      {"title": "Find Similarities", "description": "Identify two similar elements along the route.", "xp": 20},
+      {"title": "Discover a Difference", "description": "Find an interesting difference between two places.", "xp": 20}
     ],
     "total_xp": 60
   },
@@ -386,12 +386,12 @@
     "id": "surprise-medium-03",
     "adventure_type": "surprise",
     "difficulty": "medium",
-    "title": "Detective por un día",
-    "description": "Resuelve una investigación visual usando pistas del entorno.",
+    "title": "Detective for a Day",
+    "description": "Solve a visual investigation using clues from your surroundings.",
     "missions": [
-      {"title": "Observa las pistas", "description": "Encuentra tres detalles que llamen tu atención.", "xp": 20},
-      {"title": "Busca una relación", "description": "Relaciona dos de tus hallazgos por una característica común.", "xp": 20},
-      {"title": "Resuelve el misterio", "description": "Escribe una conclusión basada en lo que observaste.", "xp": 20}
+      {"title": "Observe the Clues", "description": "Find three details that catch your attention.", "xp": 20},
+      {"title": "Find a Connection", "description": "Connect two of your findings through a shared characteristic.", "xp": 20},
+      {"title": "Solve the Mystery", "description": "Write a conclusion based on what you observed.", "xp": 20}
     ],
     "total_xp": 60
   },
@@ -399,13 +399,13 @@
     "id": "surprise-hard-01",
     "adventure_type": "surprise",
     "difficulty": "hard",
-    "title": "Expedición sorpresa",
-    "description": "Supera una secuencia de retos de observación y exploración.",
+    "title": "Surprise Expedition",
+    "description": "Complete a sequence of observation and exploration challenges.",
     "missions": [
-      {"title": "Explora algo diferente", "description": "Recorre un tramo nuevo de una ruta pública y segura.", "xp": 20},
-      {"title": "Encuentra cinco detalles", "description": "Identifica cinco elementos distintos de tu entorno.", "xp": 25},
-      {"title": "Descubre una conexión", "description": "Encuentra dos elementos que tengan algo en común.", "xp": 20},
-      {"title": "Documenta tu aventura", "description": "Registra tus hallazgos con notas o fotografías respetuosas.", "xp": 15}
+      {"title": "Explore Something Different", "description": "Walk along a new section of a safe public route.", "xp": 20},
+      {"title": "Find Five Details", "description": "Identify five different elements in your surroundings.", "xp": 25},
+      {"title": "Discover a Connection", "description": "Find two elements that have something in common.", "xp": 20},
+      {"title": "Document Your Adventure", "description": "Record your findings with notes or respectful photographs.", "xp": 15}
     ],
     "total_xp": 80
   },
@@ -413,13 +413,13 @@
     "id": "surprise-hard-02",
     "adventure_type": "surprise",
     "difficulty": "hard",
-    "title": "El desafío de las pistas",
-    "description": "Resuelve una serie de retos conectados mediante observación.",
+    "title": "The Clue Challenge",
+    "description": "Solve a series of challenges connected through observation.",
     "missions": [
-      {"title": "Detecta un patrón", "description": "Encuentra un patrón repetido en el entorno.", "xp": 20},
-      {"title": "Busca una excepción", "description": "Identifica un elemento que rompa ese patrón.", "xp": 20},
-      {"title": "Crea una hipótesis", "description": "Escribe una explicación posible de lo que observaste.", "xp": 20},
-      {"title": "Completa la investigación", "description": "Registra tus conclusiones sin salir de los espacios públicos.", "xp": 20}
+      {"title": "Spot a Pattern", "description": "Find a repeating pattern in your surroundings.", "xp": 20},
+      {"title": "Find an Exception", "description": "Identify an element that breaks that pattern.", "xp": 20},
+      {"title": "Form a Hypothesis", "description": "Write a possible explanation for what you observed.", "xp": 20},
+      {"title": "Complete the Investigation", "description": "Record your conclusions without leaving public spaces.", "xp": 20}
     ],
     "total_xp": 80
   },
@@ -427,13 +427,13 @@
     "id": "surprise-hard-03",
     "adventure_type": "surprise",
     "difficulty": "hard",
-    "title": "La gran búsqueda visual",
-    "description": "Completa una búsqueda de elementos, colores y formas.",
+    "title": "The Great Visual Hunt",
+    "description": "Complete a search for objects, colors, and shapes.",
     "missions": [
-      {"title": "Busca cinco colores", "description": "Identifica cinco colores distintos en el entorno.", "xp": 20},
-      {"title": "Encuentra cuatro formas", "description": "Registra cuatro formas geométricas diferentes.", "xp": 20},
-      {"title": "Detecta tres texturas", "description": "Observa tres texturas sin tocar objetos desconocidos.", "xp": 20},
-      {"title": "Comparte tu hallazgo", "description": "Describe tu descubrimiento favorito sin revelar datos personales.", "xp": 20}
+      {"title": "Find Five Colors", "description": "Identify five different colors in your surroundings.", "xp": 20},
+      {"title": "Find Four Shapes", "description": "Record four different geometric shapes.", "xp": 20},
+      {"title": "Spot Three Textures", "description": "Observe three textures without touching unfamiliar objects.", "xp": 20},
+      {"title": "Share Your Discovery", "description": "Describe your favorite discovery without revealing personal information.", "xp": 20}
     ],
     "total_xp": 80
   }
