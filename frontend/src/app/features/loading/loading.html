@@ -1,108 +1,475 @@
-<div
-  class="min-h-screen bg-[#f7f8f5] px-6 py-10"
->
-  <main
-    class="mx-auto flex min-h-[90vh] max-w-2xl flex-col justify-center"
-  >
-    <div class="text-center">
+<div class="loading-page">
 
+  <div class="page-ambient" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a routerLink="/" class="brand" aria-label="Ruta Viva AI - Home">
+      <img
+        src="/logo/ruta-viva-ai-logo.svg"
+        alt="Ruta Viva AI"
+        class="brand-logo"
+      />
+    </a>
+  </header>
+
+  <main class="loading-main">
+
+    <div class="loading-content">
+
+      <!-- ILLUSTRATION -->
       <div
-        class="mx-auto mb-10 flex h-32 max-w-md items-center justify-center rounded-[2rem] bg-emerald-50"
+        class="explorer-scene"
+        [class.is-paused]="error()"
+        aria-hidden="true"
       >
-        <div class="text-5xl">
-          <span class="text-emerald-600">⌁</span>
-        </div>
-      </div>
 
-      <h1
-        class="text-3xl font-semibold tracking-tight text-white"
-      >
-        Preparando tu ruta
-      </h1>
+        <div class="scene-grid"></div>
 
-      <p
-        class="mx-auto mt-4 max-w-md text-base leading-7 text-slate-500"
-      >
-        Tu Game Master está creando una aventura única
-        para ti...
-      </p>
-
-      <div
-        class="mt-8 h-2 overflow-hidden rounded-full bg-slate-200"
-      >
-        <div
-          class="h-full w-1/2 rounded-full bg-emerald-500"
-        ></div>
-      </div>
-
-      @if (request) {
-        <div
-          class="mt-8 rounded-2xl border border-slate-200 bg-white p-6 text-left shadow-sm"
+        <svg
+          class="landscape-svg"
+          viewBox="0 0 680 320"
+          preserveAspectRatio="xMidYMid meet"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <div class="grid gap-5 sm:grid-cols-3">
+          <!-- SUN -->
+          <circle
+            class="scene-sun"
+            cx="525"
+            cy="76"
+            r="39"
+            fill="#DCEEC7"
+          />
 
-            <div>
-              <p class="text-xs uppercase tracking-wide text-slate-400">
-                Tema
-              </p>
+          <circle
+            cx="525"
+            cy="76"
+            r="58"
+            stroke="#BDD8B6"
+            stroke-opacity=".55"
+          />
 
-              <p class="mt-1 font-semibold text-slate-800">
-                {{ getTypeLabel(request.adventure_type) }}
-              </p>
+          <!-- CLOUDS -->
+          <g class="cloud cloud-one">
+            <path
+              d="M80 91C65 91 62 72 76 66C77 45 110 43 116 61C130 57 144 68 142 81C150 87 144 96 133 96H80Z"
+              fill="white"
+              fill-opacity=".82"
+            />
+          </g>
+
+          <g class="cloud cloud-two">
+            <path
+              d="M405 52C392 52 389 39 402 35C405 19 430 19 436 34C450 29 461 42 452 52H405Z"
+              fill="white"
+              fill-opacity=".68"
+            />
+          </g>
+
+          <!-- FAR MOUNTAINS -->
+          <path
+            d="M0 238L88 124L147 191L241 84L358 229L466 103L571 202L627 147L680 205V320H0Z"
+            fill="#DCE9DC"
+          />
+
+          <path
+            d="M199 135L241 84L282 136L263 129L246 140L231 121L217 140Z"
+            fill="#F6FAF5"
+          />
+
+          <path
+            d="M427 150L466 103L503 153L479 146L464 158L451 140Z"
+            fill="#F6FAF5"
+          />
+
+          <!-- MIDDLE MOUNTAINS -->
+          <path
+            d="M0 263L108 173L207 245L307 162L425 260L533 171L680 244V320H0Z"
+            fill="#B8D3BB"
+          />
+
+          <!-- FOREGROUND HILLS -->
+          <path
+            d="M0 273C95 237 152 271 219 249C305 218 360 275 437 253C521 230 601 243 680 218V320H0Z"
+            fill="#89B29A"
+          />
+
+          <path
+            d="M0 291C111 268 175 285 270 264C373 246 450 292 552 259C606 244 647 254 680 264V320H0Z"
+            fill="#527F68"
+          />
+
+          <!-- SMALL TREES -->
+          <g fill="#285A46" opacity=".75">
+            <path d="M70 270L84 238L98 270H88V285H80V270Z"/>
+            <path d="M560 259L574 224L588 259H578V277H570V259Z"/>
+            <path d="M601 267L611 242L621 267H615V281H607V267Z"/>
+            <path d="M122 277L132 251L142 277H136V291H128V277Z"/>
+          </g>
+
+          <!-- WALKING TRAIL -->
+          <path
+            class="trail-line"
+            d="M50 307C122 280 185 309 255 284C323 258 393 304 471 278C542 254 596 281 646 258"
+            stroke="#FFFFFF"
+            stroke-width="6"
+            stroke-linecap="round"
+            stroke-dasharray="5 14"
+          />
+
+          <!-- DESTINATION FLAG -->
+          <g class="destination-flag">
+            <path
+              d="M605 244V196"
+              stroke="#194B39"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+            <path
+              d="M605 197L635 205L605 215V197Z"
+              fill="#B8FF17"
+              stroke="#194B39"
+              stroke-width="1.5"
+              stroke-linejoin="round"
+            />
+            <circle cx="605" cy="246" r="5" fill="#194B39"/>
+          </g>
+        </svg>
+
+        <!-- EXPLORER -->
+        <div class="explorer-track">
+
+          <svg
+            class="explorer-character"
+            viewBox="0 0 130 175"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <ellipse
+              class="character-shadow"
+              cx="66"
+              cy="164"
+              rx="28"
+              ry="6"
+              fill="#123D30"
+              opacity=".16"
+            />
+
+            <!-- LEGS -->
+            <g class="legs">
+              <g class="leg-group leg-left">
+                <path
+                  d="M58 108L50 132L58 154"
+                  stroke="#2F5050"
+                  stroke-width="12"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  fill="none"
+                />
+                <path
+                  d="M54 154H70"
+                  stroke="#18302B"
+                  stroke-width="9"
+                  stroke-linecap="round"
+                />
+              </g>
+
+              <g class="leg-group leg-right">
+                <path
+                  d="M74 108L84 132L76 154"
+                  stroke="#233F40"
+                  stroke-width="12"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  fill="none"
+                />
+                <path
+                  d="M72 154H88"
+                  stroke="#18302B"
+                  stroke-width="9"
+                  stroke-linecap="round"
+                />
+              </g>
+            </g>
+
+            <!-- BODY -->
+            <g class="character-body">
+              <!-- backpack -->
+              <rect
+                x="28"
+                y="72"
+                width="26"
+                height="44"
+                rx="10"
+                fill="#2C6F52"
+              />
+              <rect
+                x="24"
+                y="84"
+                width="12"
+                height="22"
+                rx="5"
+                fill="#205842"
+              />
+
+              <!-- arms -->
+              <g class="arm-group arm-left">
+                <path
+                  d="M49 80L37 98L44 112"
+                  stroke="#DAAA81"
+                  stroke-width="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  fill="none"
+                />
+              </g>
+
+              <g class="arm-group arm-right">
+                <path
+                  d="M80 80L92 97L85 112"
+                  stroke="#E3B28C"
+                  stroke-width="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  fill="none"
+                />
+              </g>
+
+              <!-- jacket -->
+              <path
+                d="M50 68C42 74 40 88 44 110H84C88 88 86 75 78 68Z"
+                fill="#B8FF17"
+                stroke="#95C823"
+                stroke-width="1.5"
+              />
+              <path
+                d="M65 70V110"
+                stroke="#88B91D"
+                stroke-width="2"
+              />
+              <path
+                d="M43 92H85"
+                stroke="#95C823"
+                stroke-width="2"
+                opacity=".8"
+              />
+
+              <!-- neck -->
+              <rect
+                x="58"
+                y="56"
+                width="12"
+                height="12"
+                rx="5"
+                fill="#D8A57F"
+              />
+
+              <!-- head -->
+              <circle
+                cx="64"
+                cy="40"
+                r="23"
+                fill="#E7B78F"
+              />
+
+              <!-- hair -->
+              <path
+                d="M42 39C40 18 52 12 66 12C81 12 89 22 87 39C80 35 77 27 71 26C60 35 52 33 42 39Z"
+                fill="#264137"
+              />
+
+              <!-- cap -->
+              <path
+                d="M43 29C47 13 58 8 72 11C82 13 88 20 89 29Z"
+                fill="#1E5946"
+              />
+              <path
+                d="M61 29H98"
+                stroke="#174733"
+                stroke-width="7"
+                stroke-linecap="round"
+              />
+
+              <!-- face -->
+              <circle cx="72" cy="40" r="1.8" fill="#273C33"/>
+              <path
+                d="M71 49Q76 53 80 49"
+                stroke="#8A563E"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                fill="none"
+              />
+            </g>
+          </svg>
+        </div>
+
+        <div class="scene-compass">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle
+              cx="12"
+              cy="12"
+              r="9"
+              stroke="currentColor"
+              stroke-width="1.4"
+            />
+            <path
+              d="M15.5 8.5L13.5 13.5L8.5 15.5L10.5 10.5L15.5 8.5Z"
+              stroke="currentColor"
+              stroke-width="1.4"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+
+      </div>
+
+      <!-- TEXT -->
+      <section class="loading-information" aria-live="off">
+
+        <h1 class="loading-title">
+          @if (!error()) {
+            Creating your
+            <span>adventure...</span>
+          } @else {
+            Something went
+            <span>off the trail.</span>
+          }
+        </h1>
+
+        @if (!error()) {
+          <div class="dynamic-status" aria-live="polite">
+            <span class="status-symbol">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 3L14.5 9.5L21 12L14.5 14.5L12 21L9.5 14.5L3 12L9.5 9.5L12 3Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+
+            <span>{{ currentMessage() }}</span>
+          </div>
+
+          <div
+            class="progress-track"
+            role="progressbar"
+            aria-label="Generating adventure"
+            aria-valuetext="Adventure generation in progress"
+          >
+            <div class="progress-glow"></div>
+            <div class="progress-indicator"></div>
+          </div>
+        }
+
+      </section>
+
+      <!-- SUMMARY -->
+      @if (request) {
+        <section class="journey-summary" aria-label="Adventure preferences">
+
+          <div class="summary-grid">
+
+            <div class="summary-item">
+              <div class="summary-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="9"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M15 9L13 13L9 15L11 11L15 9Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+
+              <div>
+                <span class="summary-label">EXPERIENCE</span>
+                <strong>{{ getTypeLabel(request.adventure_type) }}</strong>
+              </div>
             </div>
 
-            <div>
-              <p class="text-xs uppercase tracking-wide text-slate-400">
-                Duración
-              </p>
+            <div class="summary-item">
+              <div class="summary-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="9"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M12 7V12L15 14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
 
-              <p class="mt-1 font-semibold text-slate-800">
-                {{ request.duration }} minutos
-              </p>
+              <div>
+                <span class="summary-label">DURATION</span>
+                <strong>{{ request.duration }} min</strong>
+              </div>
             </div>
 
-            <div>
-              <p class="text-xs uppercase tracking-wide text-slate-400">
-                Dificultad
-              </p>
+            <div class="summary-item">
+              <div class="summary-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M3 18L9 10L13 14L17 6L21 18H3Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
 
-              <p class="mt-1 font-semibold text-slate-800">
-                {{ getDifficultyLabel(request.difficulty) }}
-              </p>
+              <div>
+                <span class="summary-label">DIFFICULTY</span>
+                <strong>{{ getDifficultyLabel(request.difficulty) }}</strong>
+              </div>
             </div>
 
           </div>
-        </div>
+        </section>
       }
 
-      @if (error) {
-        <div
-          class="mt-6 rounded-2xl border border-red-200 bg-red-50 p-5"
-        >
-          <p class="font-semibold text-red-700">
-            No pudimos crear tu aventura.
-          </p>
-
-          <p class="mt-1 text-sm text-red-600">
-            El Game Master no respondió correctamente.
-          </p>
-
+      <!-- ERROR -->
+      @if (error()) {
+        <div class="error-actions">
           <button
             type="button"
+            class="retry-button"
             (click)="retry()"
-            class="mt-4 rounded-xl bg-red-600 px-5 py-3 font-semibold text-white"
           >
-            Intentar nuevamente
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M3 12A9 9 0 1 0 6 5M3 4V9H8"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            Try again
           </button>
+
+          <a routerLink="/setup" class="back-button">
+            Change preferences
+          </a>
         </div>
       }
 
-      <div
-        class="mt-5 rounded-2xl bg-emerald-50 px-5 py-4 text-sm text-emerald-700"
-      >
-        Mientras tanto, prepara tus tenis y sal a explorar.
-      </div>
-
     </div>
+
   </main>
 </div>
