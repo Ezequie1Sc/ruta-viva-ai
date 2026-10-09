@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
@@ -8,6 +9,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './badges.scss',
 })
 export class Badges {
+
   badges = [
     {
       name: 'Primer Paso',
@@ -94,4 +96,5 @@ export class Badges {
       unlocked: false,
     },
   ];
+
 }
