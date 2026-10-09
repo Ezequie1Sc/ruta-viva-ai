@@ -9,7 +9,7 @@ class AIService:
         self.api_key = settings.openrouter_api_key
         self.model = settings.openrouter_model
 
-    async def generate_adventure(self, prompt: str) -> str:
+    async def select_adventure(self, prompt: str) -> str:
         headers = {
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json",
@@ -21,28 +21,28 @@ class AIService:
                 {
                     "role": "system",
                     "content": (
-                        "You are the AI game master for Ruta Viva AI. "
-                        "Create outdoor adventures that encourage users "
-                        "to explore the real world."
+                        "Eres el selector inteligente de Ruta Viva AI. "
+                        "Elige una aventura exclusivamente entre las "
+                        "candidatas proporcionadas. No inventes IDs. "
+                        'Responde solo JSON: {"adventure_id": "id"}'
                     ),
                 },
-                {
-                    "role": "user",
-                    "content": prompt,
-                },
+                {"role": "user", "content": prompt},
             ],
+            "temperature": 0,
+            "max_tokens": 80,
         }
 
-        async with httpx.AsyncClient() as client:
+        timeout = httpx.Timeout(8.0, connect=5.0)
+
+        async with httpx.AsyncClient(timeout=timeout) as client:
             response = await client.post(
                 f"{self.base_url}/chat/completions",
                 headers=headers,
                 json=payload,
-                timeout=60.0,
             )
 
         response.raise_for_status()
-
         data = response.json()
 
         return data["choices"][0]["message"]["content"]
