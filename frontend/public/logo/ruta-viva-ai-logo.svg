@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title desc">
+  <title id="title">Ruta Viva AI</title>
+  <desc id="desc">Logotipo minimalista de un pin de ubicación con sol, colinas y un camino, junto al nombre Ruta Viva AI.</desc>
+  <defs>
+    <linearGradient id="pin" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#15866A"/>
+      <stop offset="1" stop-color="#A8D957"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#FFD85A"/>
+      <stop offset="1" stop-color="#FFA640"/>
+    </linearGradient>
+    <linearGradient id="hill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B463A"/>
+      <stop offset="1" stop-color="#147A54"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Location pin / living landscape -->
+  <path d="M400 75c-112 0-203 88-203 197 0 126 120 237 203 324 83-87 203-198 203-324C603 163 512 75 400 75Z" fill="url(#pin)"/>
+  <circle cx="400" cy="271" r="91" fill="url(#sun)"/>
+  <path d="M205 357 294 286c18-14 35-14 52 0l75 59 43-27c18-11 34-11 51 1l88 63c-37 78-108 147-203 214-82-75-158-153-195-239Z" fill="#0D3E34"/>
+  <path d="M223 405 291 365c21-12 42-10 62 5l47 35 53-26c24-12 42-11 65 2l100 56c-37 64-102 123-218 221-70-68-139-139-177-253Z" fill="url(#hill)"/>
+  <path d="M376 653c36-31 69-61 94-87 23-24 15-45-13-62l-72-43c-17-10-17-22 0-32l57-33c14-8 14-18 1-27l-42-29 28-17 64 43c28 19 28 42 0 60l-52 33c-17 11-17 20 0 30l65 39c42 25 44 57 10 91-23 23-48 47-75 70Z" fill="#FFFDF2"/>
+  <!-- AI sparkle -->
+  <path d="M635 112c5 27 17 39 44 44-27 5-39 17-44 44-5-27-17-39-44-44 27-5 39-17 44-44Z" fill="#8DCE43"/>
+
+  <!-- Wordmark -->
+  <text x="400" y="725" text-anchor="middle" font-family="Inter, Montserrat, Arial, sans-serif" font-size="72" font-weight="750" letter-spacing="-3">
+    <tspan fill="#123D34">Ruta</tspan><tspan fill="#63B83E">Viva</tspan><tspan fill="#123D34"> AI</tspan>
+  </text>
+</svg>
