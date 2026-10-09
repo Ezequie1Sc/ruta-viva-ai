@@ -1,9 +1,32 @@
-import { Component } from '@angular/core';
+
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject
+} from '@angular/core';
+
+import {
+  RouterLink
+} from '@angular/router';
+
+import {
+  AdventureService
+} from '../../core/services/adventure.service';
 
 @Component({
-  imports: [],
   selector: 'app-history',
-  styleUrl: './history.scss',
+  standalone: true,
+  imports: [RouterLink],
   templateUrl: './history.html',
+  styleUrl: './history.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class History {}
+export class History {
+
+  private readonly adventureService =
+    inject(AdventureService);
+
+  readonly currentAdventure =
+    this.adventureService.currentAdventure;
+
+}

@@ -1,1 +1,375 @@
-<p>history works!</p>
+
+<div class="history-page">
+
+  <div class="page-background" aria-hidden="true"></div>
+  <div class="page-overlay" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+
+    <a
+      routerLink="/"
+      class="brand"
+      aria-label="Ruta Viva AI - Home"
+    >
+      <img
+        src="/logo/ruta-viva-ai-logo.svg"
+        alt="Ruta Viva AI"
+        class="brand-logo"
+      />
+    </a>
+
+    <nav class="header-navigation" aria-label="Main navigation">
+      <a routerLink="/" class="nav-link">
+        Home
+      </a>
+
+      <a
+        routerLink="/history"
+        class="nav-link nav-link--active"
+        aria-current="page"
+      >
+        My adventures
+      </a>
+
+      <a routerLink="/setup" class="header-cta">
+        New adventure
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path
+            d="M12 5V19M5 12H19"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+          />
+        </svg>
+      </a>
+    </nav>
+
+    <a
+      routerLink="/"
+      class="mobile-back"
+      aria-label="Back to home"
+    >
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path
+          d="M19 12H5M12 19L5 12L12 5"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+
+  </header>
+
+  <main class="history-main">
+
+    <!-- INTRO -->
+    
+
+    <!-- CURRENT ADVENTURE -->
+    @if (currentAdventure(); as adventure) {
+
+      <section class="current-section">
+
+        <div class="section-heading">
+          <div>
+            <span class="section-eyebrow">YOUR JOURNEY</span>
+            <h2>Current adventure<span>.</span></h2>
+          </div>
+        </div>
+
+        <article class="current-card">
+
+          <!-- ARTWORK -->
+          <div class="current-artwork">
+
+            <div class="artwork-grid" aria-hidden="true"></div>
+
+            <svg
+              class="artwork-landscape"
+              viewBox="0 0 500 300"
+              preserveAspectRatio="xMidYMid slice"
+              fill="none"
+              aria-hidden="true"
+            >
+              <circle cx="384" cy="72" r="46" fill="#D8EABE"/>
+
+              <path
+                d="M0 208L112 72L208 182L302 61L425 194L500 118V300H0Z"
+                fill="#D5E6D4"
+              />
+
+              <path
+                d="M74 119L112 72L149 121L124 111L110 126L96 110Z"
+                fill="#F9FCF6"
+              />
+
+              <path
+                d="M262 110L302 61L346 118L318 105L300 123L286 105Z"
+                fill="#F9FCF6"
+              />
+
+              <path
+                d="M0 244L97 150L206 237L307 146L421 234L500 172V300H0Z"
+                fill="#9DC2A5"
+              />
+
+              <path
+                d="M0 269C87 239 153 265 238 229C327 190 409 253 500 216V300H0Z"
+                fill="#638F73"
+              />
+
+              <path
+                d="M0 290C110 265 195 294 284 266C365 243 441 267 500 250V300H0Z"
+                fill="#2D654C"
+              />
+
+              <path
+                class="artwork-path"
+                d="M55 283C125 253 163 279 226 246S336 254 391 204S437 192 466 170"
+                stroke="white"
+                stroke-width="5"
+                stroke-dasharray="5 11"
+                stroke-linecap="round"
+              />
+
+              <circle
+                cx="55" cy="283" r="8"
+                fill="#B8FF17"
+                stroke="white"
+                stroke-width="3"
+              />
+            </svg>
+
+            <span class="artwork-label">
+              RUTA VIVA AI / EXPLORE
+            </span>
+
+          </div>
+
+          <!-- INFORMATION -->
+          <div class="current-content">
+
+            <div class="current-topline">
+              <span class="current-status">
+                <span></span>
+                READY TO EXPLORE
+              </span>
+
+              <span class="current-duration">
+                {{ adventure.duration }} MIN
+              </span>
+            </div>
+
+            <h3>{{ adventure.title }}</h3>
+
+            <p class="current-description">
+              {{ adventure.description }}
+            </p>
+
+            <div class="current-details">
+
+              <div class="current-detail">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <circle
+                    cx="12" cy="12" r="9"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M15 9L13 13L9 15L11 11L15 9Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                {{ adventure.missions.length }} missions
+              </div>
+
+              <div class="current-detail">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M12 3L14.5 9.5L21 12L14.5 14.5L12 21L9.5 14.5L3 12L9.5 9.5L12 3Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                {{ adventure.total_xp }} XP available
+              </div>
+
+            </div>
+
+            <div class="current-actions">
+
+              <a routerLink="/adventure" class="primary-button">
+                View adventure
+
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M5 19L19 5M8 5H19V16"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+
+              <a routerLink="/setup" class="text-button">
+                Create another
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </section>
+
+    }
+
+    <!-- HISTORY SECTION -->
+    <section class="journal-section">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="section-eyebrow">
+            THE JOURNAL
+          </span>
+
+          <h2>
+            Adventure history<span>.</span>
+          </h2>
+        </div>
+
+        <div class="journal-ornament" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path
+              d="M4 5H20M4 12H20M4 19H14"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+
+      </div>
+
+      <!-- EMPTY HISTORY -->
+      <div class="empty-journal">
+
+        <div class="empty-artwork" aria-hidden="true">
+
+          <svg viewBox="0 0 220 150" fill="none">
+
+            <!-- DECORATIVE CIRCLES -->
+            <circle
+              cx="110" cy="75" r="67"
+              stroke="#CEE0CA"
+            />
+            <circle
+              cx="110" cy="75" r="49"
+              stroke="#DBE9D6"
+            />
+
+            <!-- MAP SHEET -->
+            <path
+              d="M52 48L91 36L130 48L168 36V110L130 122L91 110L52 122V48Z"
+              fill="#FFFFFF"
+              stroke="#93B09B"
+              stroke-width="2"
+              stroke-linejoin="round"
+            />
+
+            <path
+              d="M91 36V110M130 48V122"
+              stroke="#B9CFBA"
+              stroke-width="2"
+            />
+
+            <!-- ROUTE -->
+            <path
+              d="M67 94C80 73 100 88 111 70C125 49 143 76 153 58"
+              stroke="#77AD58"
+              stroke-width="3"
+              stroke-dasharray="4 6"
+              stroke-linecap="round"
+            />
+
+            <circle
+              cx="67" cy="94" r="5"
+              fill="#B8FF17"
+              stroke="#568449"
+              stroke-width="1.5"
+            />
+
+            <circle
+              cx="153" cy="58" r="5"
+              fill="#B8FF17"
+              stroke="#568449"
+              stroke-width="1.5"
+            />
+
+            <!-- COMPASS -->
+            <circle
+              cx="160" cy="107" r="23"
+              fill="#F2F8EF"
+              stroke="#A2C09C"
+              stroke-width="2"
+            />
+
+            <path
+              d="M168 99L163 110L152 115L157 104L168 99Z"
+              fill="#B8FF17"
+              stroke="#426F4C"
+              stroke-width="1.5"
+              stroke-linejoin="round"
+            />
+
+          </svg>
+
+        </div>
+
+        <span class="empty-label">A STORY YET TO BE WRITTEN</span>
+
+        <h3>Your journey starts here.</h3>
+
+        <p>
+          No past adventures saved yet.
+          Every great story begins with a first step.
+        </p>
+
+        <a routerLink="/setup" class="empty-cta">
+          Create an adventure
+
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M5 19L19 5M8 5H19V16"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="history-footer">
+      <span>RUTA VIVA AI</span>
+      <span>EXPLORE · DISCOVER · LIVE</span>
+    </footer>
+
+  </main>
+
+</div>
