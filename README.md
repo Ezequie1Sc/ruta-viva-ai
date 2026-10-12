@@ -1,4 +1,4 @@
-# 🌿 Ruta Viva AI
+# Ruta Viva AI 🌿
 
 ### Turn the ordinary into an unforgettable adventure.
 
